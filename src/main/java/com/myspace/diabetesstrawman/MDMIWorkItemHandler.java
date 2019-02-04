@@ -65,7 +65,7 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 
 	public String runTransformation(String content) throws Exception  {
 
-		final String API_URI = "http://localhost:8180/org.mdmi.rt.service/transformation"; //"http://35.169.86.146:8080/org.mdmi.rt.service/transformation";
+		final String API_URI = "http://transform.mdixinc.net:8080/nydemo/transformation"; //"http://35.169.86.146:8080/org.mdmi.rt.service/transformation";
 	        try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
  	    		
 	    		if (StringUtils.isEmpty(source)) {
