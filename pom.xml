@@ -2,12 +2,12 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.diabetesguidelineui</groupId>
-  <artifactId>DiabetesFullFlow</artifactId>
-  <version>1.0.0</version>
+  <groupId>com.myspace</groupId>
+  <artifactId>DiabetesStrawman</artifactId>
+  <version>5.0.0</version>
   <packaging>kjar</packaging>
-  <name>DiabetesFullFlow</name>
-  <description></description>
+  <name>DiabetesStrawman</name>
+  <description>DiabetesStrawman</description>
   <dependencies>
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
@@ -43,6 +43,29 @@
       <groupId>org.kie</groupId>
       <artifactId>kie-api</artifactId>
       <version>7.15.0.Final</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-workitems-rest</artifactId>
+      <version>7.15.0.Final</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpmime</artifactId>
+      <version>4.5.3</version>
+    </dependency>
+    <dependency>
+      <groupId>ca.uhn.hapi.fhir</groupId>
+      <artifactId>hapi-fhir-base</artifactId>
+      <version>3.6.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>ca.uhn.hapi.fhir</groupId>
+      <artifactId>hapi-fhir-structures-dstu3</artifactId>
+      <version>3.6.0</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

@@ -1,0 +1,248 @@
+<Composition xmlns="http://hl7.org/fhir">
+	<id value="CCDA-on-FHIR-Continuity-of-Care-Document-Example" />
+	<meta>
+		<versionId value="1" />
+		<lastUpdated value="2016-06-15T08:16:14Z" />
+		<profile
+			value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document" />
+	</meta>
+	<language value="en-US" />
+	<text>
+		<status value="generated" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>Continuity of Care document for Henry Jones</p>
+			<p>Managed by Community Health and Hospitals</p>
+		</div>
+	</text>
+	<!-- <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer"><valueReference><reference 
+		value="http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500"/></valueReference></extension><extension 
+		url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant"><valueReference><reference 
+		value="http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500"/></valueReference></extension><extension 
+		url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient"><valueReference><reference 
+		value="http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500"/></valueReference></extension><extension 
+		url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant"><valueReference><reference 
+		value="http://fhirtest.uhn.ca/baseDstu3/RelatedPerson/117466"/></valueReference></extension><extension 
+		url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer"><valueReference><reference 
+		value="http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500"/></valueReference></extension> -->
+	<!-- <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization"><valueReference><reference 
+		value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent"/></valueReference></extension> -->
+	<identifier>
+		<system
+			value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document" />
+		<value value="1" />
+	</identifier>
+	<date value="2016-02-14T09:10:14Z" />
+	<type>
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="34133-9" />
+			<display value="Summary of episode note" />
+		</coding>
+	</type>
+	<title value="Continuity of Care Document" />
+	<status value="preliminary" />
+	<confidentiality value="N" />
+	<!-- Patient Resource -->
+	<subject>
+		<reference
+			value="http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7" />
+		<display value="Henry Jones" />
+	</subject>
+	<!-- Practitioner Resource -->
+	<author>
+		<reference
+			value="http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500" />
+		<display value="Adam Everyman, MD" />
+	</author>
+	<attester>
+		<mode value="legal" />
+		<time value="2012-01-04T09:10:14Z" />
+		<party>
+			<reference
+				value="http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500" />
+			<display value="Adam Everyman, MD" />
+		</party>
+	</attester>
+	<!-- Organization Resource -->
+	<custodian>
+		<reference
+			value="http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7" />
+		<display value="Community Health and Hospitals" />
+	</custodian>
+	<event>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/v3/ActClass" />
+				<code value="PCPR" />
+				<display value="Care Provision" />
+			</coding>
+		</code>
+		<period>
+			<start value="2015-11-18" />
+			<end value="2015-12-12" />
+		</period>
+	</event>
+	<!-- Encounter Resource -->
+	<!-- <encounter><reference value="http://fhirtest.uhn.ca/baseDstu3/Encounter/117630"/></encounter> -->
+	<!-- Allergies and Intolerances Section Narrative -->
+	<!-- Allergy and Intolerance Section Resource -->
+	<!-- <entry><reference value="http://fhirtest.uhn.ca/baseDstu3/AllergyIntolerance/117632"/></entry> -->
+	<section>
+		<title value="Allergies and Intolerances Section" />
+		<code>
+			<coding>
+				<system value="http://loinc.org" />
+				<code value="48765-2" />
+				<display value="Allergies and adverse reactions" />
+			</coding>
+		</code>
+		<text>
+			<status value="generated" />
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<table>
+					<tr>
+						<td>
+							<b>Substance</b>
+						</td>
+						<td>
+							<b>Overall Severity</b>
+						</td>
+						<td>
+							<b>Reaction</b>
+						</td>
+						<td>
+							<b>Reaction Severity</b>
+						</td>
+						<td>
+							<b>Status</b>
+						</td>
+					</tr>
+					<tr>
+						<td>Cashew Nut</td>
+						<td>Severe</td>
+						<td>Anaphylactic reaction</td>
+						<td>Mild</td>
+						<td>Active</td>
+					</tr>
+				</table>
+			</div>
+		</text>
+		<mode value="snapshot" />
+		<orderedBy>
+			<coding>
+				<system value="http://hl7.org/fhir/list-order" />
+				<code value="event-date" />
+				<display value="Sorted by Event Date" />
+			</coding>
+		</orderedBy>
+
+		<entry>
+			<id value="example" />
+			<meta>
+				<profile
+					value="http://hl7.org/fhir/us/core/structureDefinition/daf-core-allergyintolerance" />
+			</meta>
+			<text>
+				<status value="generated" />
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<p>
+						<b>Generated Narrative with Details</b>
+					</p>
+					<p>
+						<b>id</b>
+						: example
+					</p>
+					<p>
+						<b>meta</b>
+						:
+					</p>
+					<p>
+						<b>clinicalStatus</b>
+						: active
+					</p>
+					<p>
+						<b>verificationStatus</b>
+						: confirmed
+					</p>
+					<p>
+						<b>category</b>
+						: medication
+					</p>
+					<p>
+						<b>criticality</b>
+						: high
+					</p>
+					<p>
+						<b>code</b>
+						: sulfonamide antibacterial
+						<span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/ndfrt code
+							'N0000175503' = 'N0000175503', given as 'sulfonamide
+							antibacterial'})
+						</span>
+					</p>
+					<p>
+						<b>patient</b>
+						:
+						<a href="Patient-example.html">Amy V. Shaw</a>
+					</p>
+					<p>
+						<b>assertedDate</b>
+						: 01/01/2000
+					</p>
+					<h3>Reactions</h3>
+					<table class="grid">
+						<tr>
+							<td>-</td>
+							<td>
+								<b>Manifestation</b>
+							</td>
+							<td>
+								<b>Severity</b>
+							</td>
+						</tr>
+						<tr>
+							<td>*</td>
+							<td>
+								skin rash
+								<span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '271807003' =
+									'271807003', given as 'skin rash'})
+								</span>
+							</td>
+							<td>mild</td>
+						</tr>
+					</table>
+				</div>
+			</text>
+			<!-- <text> <status value="generated"/> <div xmlns="http://www.w3.org/1999/xhtml">Sensitivity 
+				to sulfonamide antibacterial</div> </text> -->
+			<clinicalStatus value="active" />
+			<verificationStatus value="confirmed" />
+			<category value="medication" />
+			<criticality value="high" />
+			<code>
+				<coding>
+					<system value="http://hl7.org/fhir/ndfrt" />
+					<code value="N0000175503" />
+					<display value="sulfonamide antibacterial" />
+				</coding>
+				<text value="sulfonamide antibacterial" />
+			</code>
+			<patient>
+				<reference value="Patient-example.html" />
+				<display value="Amy V. Shaw" />
+			</patient>
+			<assertedDate value="2000" />
+			<reaction>
+				<manifestation>
+					<coding>
+						<system value="http://snomed.info/sct" />
+						<code value="271807003" />
+						<display value="skin rash" />
+					</coding>
+					<text value="skin rash" />
+				</manifestation>
+				<severity value="mild" />
+			</reaction>
+		</entry>
+	</section>
+</Composition>

@@ -1,0 +1,91 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.RuleFlowVariableLogEvent>
+      <type>32</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <variableId>patient</variableId>
+      <variableInstanceId>patient</variableInstanceId>
+      <objectToString>com.Patient@4e9695cf</objectToString>
+    </org.drools.core.audit.event.RuleFlowVariableLogEvent>
+    <org.drools.core.audit.event.RuleFlowVariableLogEvent>
+      <type>33</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <variableId>patient</variableId>
+      <variableInstanceId>patient</variableInstanceId>
+      <objectToString>com.Patient@4e9695cf</objectToString>
+    </org.drools.core.audit.event.RuleFlowVariableLogEvent>
+    <org.drools.core.audit.event.RuleFlowLogEvent>
+      <type>8</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+    </org.drools.core.audit.event.RuleFlowLogEvent>
+    <org.drools.core.audit.event.RuleFlowNodeLogEvent>
+      <type>24</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <nodeId>_02D8994A-979E-471E-ADBC-1A3375A712F1</nodeId>
+      <nodeName>Start</nodeName>
+      <nodeInstanceId>0</nodeInstanceId>
+    </org.drools.core.audit.event.RuleFlowNodeLogEvent>
+    <org.drools.core.audit.event.RuleFlowNodeLogEvent>
+      <type>26</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <nodeId>_02D8994A-979E-471E-ADBC-1A3375A712F1</nodeId>
+      <nodeName>Start</nodeName>
+      <nodeInstanceId>0</nodeInstanceId>
+    </org.drools.core.audit.event.RuleFlowNodeLogEvent>
+    <org.drools.core.audit.event.RuleFlowNodeLogEvent>
+      <type>24</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <nodeId>_B55447F3-9947-43DC-9E17-39B3B88F2553</nodeId>
+      <nodeName>Get Patient Data</nodeName>
+      <nodeInstanceId>1</nodeInstanceId>
+    </org.drools.core.audit.event.RuleFlowNodeLogEvent>
+    <org.drools.core.audit.event.RuleFlowNodeLogEvent>
+      <type>26</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <nodeId>_B55447F3-9947-43DC-9E17-39B3B88F2553</nodeId>
+      <nodeName>Get Patient Data</nodeName>
+      <nodeInstanceId>1</nodeInstanceId>
+    </org.drools.core.audit.event.RuleFlowNodeLogEvent>
+    <org.drools.core.audit.event.RuleFlowNodeLogEvent>
+      <type>24</type>
+      <processId>DiabetesStrawman.DiabetesStrawman</processId>
+      <processName>DiabetesStrawman</processName>
+      <processInstanceId>1</processInstanceId>
+      <nodeId>_9275FECC-56D7-403A-8B87-B374B3A30DF2</nodeId>
+      <nodeName>MDMI</nodeName>
+      <nodeInstanceId>2</nodeInstanceId>
+    </org.drools.core.audit.event.RuleFlowNodeLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events/>
+</org.drools.core.audit.WorkingMemoryLog>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events/>
+</org.drools.core.audit.WorkingMemoryLog>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events/>
+</org.drools.core.audit.WorkingMemoryLog>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events/>
+</org.drools.core.audit.WorkingMemoryLog>

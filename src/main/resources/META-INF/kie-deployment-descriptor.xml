@@ -9,8 +9,28 @@
     <event-listeners/>
     <task-event-listeners/>
     <globals/>
-    <work-item-handlers/>
-    <environment-entries/>
+    <work-item-handlers>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler()</identifier>
+            <parameters/>
+            <name>Rest</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.myspace.diabetesstrawman.MDMIWorkItemHandler()</identifier>
+            <parameters/>
+            <name>MDMI</name>
+        </work-item-handler>
+    </work-item-handlers>
+    <environment-entries>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>new String("http://localhost:8090/");</identifier>
+            <parameters/>
+            <name>BaseURL</name>
+        </environment-entry>
+    </environment-entries>
     <configurations/>
     <required-roles/>
     <remoteable-classes/>

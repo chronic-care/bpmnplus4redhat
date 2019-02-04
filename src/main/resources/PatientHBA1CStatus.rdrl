@@ -1,0 +1,10 @@
+import com.Patient;
+
+rule "PatientHBA1CStatus"
+	dialect "mvel"
+	ruleflow-group "patientHBA1CStatus"
+	when
+		pateint : Patient( latestHBA1C > pateint.hbA1cRangeHigh || latestHBA1C < pateint.hbA1cRangeLow )
+	then
+		pateint.setHba1cStatus( "OK" );
+end

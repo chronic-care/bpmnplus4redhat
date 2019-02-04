@@ -1,0 +1,5 @@
+http://localhost:8090/Patient
+
+kcontext.setVariable("targetURL",(String)kcontext.getKnowledgeRuntime.getGlobal("baseURL") + "Patient/" + (String)kcontext.getVariable(patientID) );
+
+

@@ -1,0 +1,1205 @@
+<Bundle xmlns="http://hl7.org/fhir">
+	<type value="searchset"></type>
+	<total value="19"></total>
+	<link>
+		<relation value="next"></relation>
+		<url
+			value="_pagelink?_link_id=DnF1ZXJ5VGhlbkZldGNoBQAAAAAAIiKAFlZJdEZXMHUwUkYyb3JzczdJeFhJVncAAAAAACIifxZWSXRGVzB1MFJGMm9yc3M3SXhYSVZ3AAAAAAAiIoEWVkl0RlcwdTBSRjJvcnNzN0l4WElWdwAAAAAAIiKCFlZJdEZXMHUwUkYyb3JzczdJeFhJVncAAAAAACIigxZWSXRGVzB1MFJGMm9yc3M3SXhYSVZ3"></url>
+	</link>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24379300001"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="44054006"></code>
+						<display value="Diabetes mellitus, type II"></display>
+					</coding>
+					<text value="Diabetes mellitus, type II"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70596"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-22"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24379500001"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<verificationStatus value="entered-in-error"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="44054006"></code>
+						<display value="Inability to maintain effective blood glucose control"></display>
+					</coding>
+					<text value="Inability to maintain effective blood glucose control"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70596"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-22"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24380500055"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="371087003"></code>
+						<display value="Risk for diabetic foot ulcer"></display>
+					</coding>
+					<text value="Risk for diabetic foot ulcer"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-30"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/135"></reference>
+					<display value="Foote,Nat "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="32596700000"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="305058001"></code>
+						<display value="Well child visit"></display>
+					</coding>
+					<text value="Well child visit"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_927"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="311."></code>
+						<display value="DEPRESSIVE DISORDER, NOT ELSEWHERE CLASSIFIED"></display>
+					</coding>
+					<text value="DEPRESSIVE DISORDER, NOT ELSEWHERE CLASSIFIED"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2013-08-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24379500067"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="162864005"></code>
+						<display value="Obesity (BMI 30-39.9)"></display>
+					</coding>
+					<text value="Obesity (BMI 30-39.9)"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-30"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_928"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="401.9"></code>
+						<display value="UNSPECIFIED ESSENTIAL HYPERTENSION"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="38341003"></code>
+						<display value="Hypertensive disorder"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="59621000"></code>
+						<display value="Essential hypertension"></display>
+					</coding>
+					<text value="UNSPECIFIED ESSENTIAL HYPERTENSION"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2010-11-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24377700000"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="305058001"></code>
+						<display value="Encounter for preventive health examination"></display>
+					</coding>
+					<text value="Encounter for preventive health examination"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-30"></assertedDate>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_930"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="733.90"></code>
+						<display value="DISORDER OF BONE AND CARTILAGE, UNSPECIFIED"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="312894000"></code>
+						<display value="Osteopenia"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="240134003"></code>
+						<display value="Disorder of bone and articular cartilage"></display>
+					</coding>
+					<text value="DISORDER OF BONE AND CARTILAGE, UNSPECIFIED"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2013-08-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_932"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="244.0"></code>
+						<display value="POSTSURGICAL HYPOTHYROIDISM"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="27059002"></code>
+						<display value="Postoperative hypothyroidism"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="27059002"></code>
+						<display value="Postoperative hypothyroidism"></display>
+					</coding>
+					<text value="POSTSURGICAL HYPOTHYROIDISM"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2002-01-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_4744"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:52:43"></lastUpdated>
+					<security>
+						<extension url="https://demo10.healthlanguage.com/api/v1">
+							<valueString value="Mental Health Sensitivity"></valueString>
+						</extension>
+						<system value="http://hl7.org/fhir/v3/ActCode"></system>
+						<code value="PSY"></code>
+						<display value="psychiatry information sensitivity"></display>
+					</security>
+					<security>
+						<system value="http://hl7.org/fhir/v3/Confidentiality"></system>
+						<code value="R"></code>
+						<display value="restricted"></display>
+					</security>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="R69."></code>
+						<display value="Illness, unspecified"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="48694002"></code>
+						<display value="Anxiety"></display>
+					</coding>
+					<text value="Illness, unspecified"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001522V244879"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2017-01-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_929"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="272.4"></code>
+						<display value="OTHER AND UNSPECIFIED HYPERLIPIDEMIA"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="55822004"></code>
+						<display value="Hyperlipidemia"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="55822004"></code>
+						<display value="Hyperlipidemia"></display>
+					</coding>
+					<text value="OTHER AND UNSPECIFIED HYPERLIPIDEMIA"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24379300003"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="38341003"></code>
+						<display value="Hypertension"></display>
+					</coding>
+					<text value="Hypertension"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-30"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24379300013"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="13644009"></code>
+						<display value="Hypercholesterolemia"></display>
+					</coding>
+					<text value="Hypercholesterolemia"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70596"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-22"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24380100005"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="59621000"></code>
+						<display value="Essential hypertension"></display>
+					</coding>
+					<text value="Essential hypertension"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<onsetString value="Approx 2012"></onsetString>
+				<assertedDate value="2015-06-30"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24380500001"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="424736006"></code>
+						<display value="Diabetic peripheral neuropathy"></display>
+					</coding>
+					<text value="Diabetic peripheral neuropathy"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-30"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/135"></reference>
+					<display value="Foote,Nat "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="24380500009"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:50:24"></lastUpdated>
+					<profile
+						value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></profile>
+					<tag>
+						<code value="Allscripts"></code>
+						<display value="Allscripts"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<language value="en-US"></language>
+				<text>
+					<status value="generated"></status>
+				</text>
+				<clinicalStatus value="active"></clinicalStatus>
+				<verificationStatus value="unknown"></verificationStatus>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/condition-category"></system>
+						<code value="diagnosis"></code>
+						<display value="Diagnosis"></display>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/"></system>
+						<code value="28876000"></code>
+						<display value="Unable to maintain effective blood glucose control"></display>
+					</coding>
+					<text value="Unable to maintain effective blood glucose control"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<display value="Anyman,Bob "></display>
+				</subject>
+				<context>
+					<reference value="Encounter/70597"></reference>
+					<display value="Appointment"></display>
+				</context>
+				<assertedDate value="2015-06-30"></assertedDate>
+				<asserter>
+					<reference value="Practitioner/137"></reference>
+					<display value="Primary,Patricia "></display>
+				</asserter>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_926"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="250.00"></code>
+						<display
+							value="DIABETES MELLITUS W/O MENTION OF COMPLICATION, TYPE II (NIDDM) (ADULT ONSET OR UNSPECIFIED TYPE), NOT STATED AS UNCONTROLLED"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="313436004"></code>
+						<display value="Type 2 diabetes mellitus without complication"></display>
+					</coding>
+					<text
+						value="DIABETES MELLITUS W/O MENTION OF COMPLICATION, TYPE II (NIDDM) (ADULT ONSET OR UNSPECIFIED TYPE), NOT STATED AS UNCONTROLLED"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2010-05-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition xmlns="http://hl7.org/fhir">
+				<id value="V_500HS_9000011_931"></id>
+				<meta>
+					<lastUpdated value="2019-01-16T11:48:53"></lastUpdated>
+					<tag>
+						<system value="urn:dxc:vista:source"></system>
+						<code value="VistA"></code>
+						<display value="VistA"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+					<tag>
+						<system
+							value="http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-condition"></system>
+						<code value="N"></code>
+						<display value="Not Compliant"></display>
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-9-cm"></system>
+						<code value="V10.87"></code>
+						<display value="PERSONAL HISTORY OF MALIGNANT NEOPLASM OF THYROID"></display>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="429254008"></code>
+						<display value="History of malignant neoplasm of thyroid"></display>
+					</coding>
+					<text value="PERSONAL HISTORY OF MALIGNANT NEOPLASM OF THYROID"></text>
+				</code>
+				<subject>
+					<reference value="Patient/1234"></reference>
+					<identifier>
+						<system value="urn:dxc:vista:icn"></system>
+						<value value="5000001533V676621"></value>
+					</identifier>
+				</subject>
+				<onsetDateTime value="2002-01-01T00:00:00+00:00"></onsetDateTime>
+			</Condition>
+		</resource>
+	</entry>
+</Bundle>

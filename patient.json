@@ -1,0 +1,30 @@
+{
+	"patientID": null,
+	"patientName": null,
+	"patientGender": null,
+	"patientDOB": null,
+	"conditions": [
+		{
+			"code": "fff",
+			"displayName": "666"
+		}
+	],
+	"comorbidityStatus": "ABSENT",
+	"microvascularComplications": "ABSENT",
+	"medications": [
+		{
+			"code": "mbbb",
+			"displayName": "222"
+		},
+		{
+			"code": "mccc",
+			"displayName": "333"
+		}
+	],
+	"bloodSugar": 100,
+	"hbA1cRangeHigh": 0.0,
+	"hbA1cRangeLow": 0.0,
+	"hba1cStatus": null,
+	"latestHBA1C": 0.0,
+	"severeStatus": false
+}

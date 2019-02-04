@@ -1,0 +1,190 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="9a76e388-fbed-4d89-8438-807734453724"/>
+    <meta>
+        <lastUpdated value="2018-04-19T14:53:37.456+00:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="3"/>
+    <link>
+        <relation value="self"/>
+        <url value="https://api-v5-stu3.hspconsortium.org/CareManagement/open/Observation?_format=application%2Ffhir%20xml&amp;_sort=date&amp;category=vital-signs&amp;patient=Patient%2Fcc-pat-betsy"/>
+    </link>
+    <entry>
+        <fullUrl value="https://api-v5-stu3.hspconsortium.org/CareManagement/open/Observation/cc-obs-betsy-height"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="cc-obs-betsy-height"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2018-04-18T02:40:37.000+00:00"/>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">Body height</div>
+                </text>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/observation-category"/>
+                        <code value="vital-signs"/>
+                    </coding>
+                    <text value="Vital Signs"/>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8302-2"/>
+                        <display value="Body height"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/cc-pat-betsy"/>
+                </subject>
+                <effectiveDateTime value="2017-11-30"/>
+                <performer>
+                    <reference value="Practitioner/cc-prac-carlson-john"/>
+                    <display value="Dr. John Carlson, MD"/>
+                </performer>
+                <valueQuantity>
+                    <value value="64"/>
+                    <unit value="in"/>
+                    <system value="http://unitsofmeasure.org/"/>
+                    <code value="[in_i]"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://api-v5-stu3.hspconsortium.org/CareManagement/open/Observation/cc-obs-betsy-bp"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="cc-obs-betsy-bp"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2018-04-18T02:40:37.000+00:00"/>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">Blood pressure</div>
+                </text>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/observation-category"/>
+                        <code value="vital-signs"/>
+                    </coding>
+                    <text value="Vital Signs"/>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="55284-4"/>
+                        <display value="Blood pressure systolic and diastolic"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/cc-pat-betsy"/>
+                </subject>
+                <effectiveDateTime value="2017-11-30"/>
+                <performer>
+                    <reference value="Practitioner/cc-prac-carlson-john"/>
+                    <display value="Dr. John Carlson, MD"/>
+                </performer>
+                <bodySite>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="368209003"/>
+                        <display value="Right arm"/>
+                    </coding>
+                </bodySite>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://loinc.org"/>
+                            <code value="8480-6"/>
+                            <display value="Systolic blood pressure"/>
+                        </coding>
+                    </code>
+                    <valueQuantity>
+                        <value value="143"/>
+                        <unit value="mmHg"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="mm[Hg]"/>
+                    </valueQuantity>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://loinc.org"/>
+                            <code value="8462-4"/>
+                            <display value="Diastolic blood pressure"/>
+                        </coding>
+                    </code>
+                    <valueQuantity>
+                        <value value="82"/>
+                        <unit value="mmHg"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="mm[Hg]"/>
+                    </valueQuantity>
+                </component>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://api-v5-stu3.hspconsortium.org/CareManagement/open/Observation/cc-obs-betsy-weight"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="cc-obs-betsy-weight"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2018-04-18T02:40:37.000+00:00"/>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">Body weight</div>
+                </text>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/observation-category"/>
+                        <code value="vital-signs"/>
+                    </coding>
+                    <text value="Vital Signs"/>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="29463-7"/>
+                        <display value="Body weight"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/cc-pat-betsy"/>
+                </subject>
+                <effectiveDateTime value="2017-11-30"/>
+                <performer>
+                    <reference value="Practitioner/cc-prac-carlson-john"/>
+                    <display value="Dr. John Carlson, MD"/>
+                </performer>
+                <valueQuantity>
+                    <value value="167"/>
+                    <unit value="lb"/>
+                    <system value="http://unitsofmeasure.org/"/>
+                    <code value="[lb_av]"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
