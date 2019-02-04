@@ -18,10 +18,13 @@ import org.apache.http.util.EntityUtils;
 import org.jbpm.process.workitem.rest.RESTWorkItemHandler;
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 
-//	String contentBundle;
+	private static final Logger logger = LoggerFactory.getLogger(MDMIWorkItemHandler.class);
+	
 	 String resultClass;
 	 String content;
 	 
@@ -41,10 +44,20 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	Object sourceInstance = null;
 	
 	public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
+		
+		
         source = (String) workItem.getParameter("source");
         target = (String) workItem.getParameter("target");
         sourceInstance =  workItem.getParameter("sourceInstance");
         resultClass = (String) workItem.getParameter("ResultClass");
+        
+         logger.info("url is "+(String) workItem.getParameter("Url"));
+      
+         
+        logger.info("source is "+source);
+        logger.info("target is "+target);
+        logger.info("sourceInstance is "+sourceInstance);
+        logger.info("resultClass is "+resultClass);
         super.executeWorkItem(workItem, manager);
 	}
 	
@@ -57,6 +70,9 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 			return super.transformResult(clazz, "application/json", runTransformation(content));	
 		} else
 		{
+			 logger.info("contentType is "+contentType);
+			 logger.info("content is "+content);
+			 
 			return mergeInstances(resultClass, super.transformResult(clazz, "application/json", runTransformation(content)),sourceInstance );
 		}
 		
@@ -65,7 +81,8 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 
 	public String runTransformation(String content) throws Exception  {
 
-		final String API_URI = "http://transform.mdixinc.net:8080/nydemo/transformation"; //"http://35.169.86.146:8080/org.mdmi.rt.service/transformation";
+		final String API_URI = "http://transform.mdixinc.net:8080/nydemo/transformation"; //"http://localhost:8180//org.mdmi.rt.service/transformation"; 
+		//"http://35.169.86.146:8080/org.mdmi.rt.service/transformation"; //"http://transform.mdixinc.net:8080/nydemo/transformation"; //
 	        try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
  	    		
 	    		if (StringUtils.isEmpty(source)) {
@@ -93,7 +110,8 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	                    .setEntity(data)
 	                    .build();
 
-	            System.out.println("Executing request " + request.getRequestLine());
+	            
+	           logger.debug("Executing request " + request.getRequestLine());
 
 	            // Create a custom response handler
 	            ResponseHandler<String> responseHandler = response -> {
@@ -119,9 +137,9 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	protected void postProcessResult(String result, String resultClass, String contentType,
 			Map<String, Object> results) {
 		super.postProcessResult(result, resultClass, contentType, results);
-		System.out.println("postProcessResult postProcessResult postProcessResult postProcessResult postProcessResult"+this.content);
+		logger.info("postProcessResult "+this.content);
 		results.put("Bundle", this.content);
-		System.out.println("postProcessResult postProcessResult postProcessResult postProcessResult postProcessResult"+results.get("Bundle"));
+		logger.info("postProcessResult "+results.get("Bundle"));
 	}
 
 
