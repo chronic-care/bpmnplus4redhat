@@ -34,6 +34,10 @@ public class SampleBundles implements java.io.Serializable {
 		return RESULTS;
 	}
 
+	private final static String GOALTEMPLATE = "{\"subject\": {        \"reference\": \"Patient/pppp\"    },\"goal\": {\"code\": {\"coding\": [{\"system\": \"http://snomed.info/\",\"code\": \"365845005\",\"display\": \"Haemoglobin A1C - diabetic control finding\"}],\"text\": \"Haemoglobin A1C - diabetic control finding\"},\"range\": {\"low\": {\"value\": llll,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"},\"high\": {\"value\": hhhh,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"}}}}"; 
+	public static String createGoal(Patient patient) {
+		return GOALTEMPLATE.replace("pppp", patient.patientID).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
+	}
 	 
 
 
