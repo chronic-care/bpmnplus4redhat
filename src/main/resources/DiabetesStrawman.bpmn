@@ -897,55 +897,7 @@ System.out.println( patient. getHbA1cRangeHigh()  );]]></drools:script>
       <bpmn2:outgoing>_E514296C-C3BB-4307-BD42-40ADBE58AD70</bpmn2:outgoing>
       <bpmn2:outgoing>_F8FD2237-0F0C-4700-BC31-6943ACCA03DA</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:task id="_EED6E0A1-B442-424F-9919-CA2B8877615A" drools:taskName="Service Task" name="Post User Goals">
-      <bpmn2:extensionElements>
-        <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Post User Goals]]></drools:metaValue>
-        </drools:metaData>
-      </bpmn2:extensionElements>
-      <bpmn2:ioSpecification id="_z5WnnymYEemwrIA9FU7w-g">
-        <bpmn2:dataInput id="_EED6E0A1-B442-424F-9919-CA2B8877615A_MethodInputX" drools:dtype="String" itemSubjectRef="__EED6E0A1-B442-424F-9919-CA2B8877615A_MethodInputXItem" name="Method"/>
-        <bpmn2:dataInput id="_EED6E0A1-B442-424F-9919-CA2B8877615A_ContentDataInputX" drools:dtype="String" itemSubjectRef="__EED6E0A1-B442-424F-9919-CA2B8877615A_ContentDataInputXItem" name="ContentData"/>
-        <bpmn2:dataInput id="_EED6E0A1-B442-424F-9919-CA2B8877615A_UrlInputX" drools:dtype="String" itemSubjectRef="__EED6E0A1-B442-424F-9919-CA2B8877615A_UrlInputXItem" name="Url"/>
-        <bpmn2:dataInput id="_EED6E0A1-B442-424F-9919-CA2B8877615A_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
-        <bpmn2:dataOutput id="_EED6E0A1-B442-424F-9919-CA2B8877615A_ResultOutputX" drools:dtype="String" itemSubjectRef="__EED6E0A1-B442-424F-9919-CA2B8877615A_ResultOutputXItem" name="Result"/>
-        <bpmn2:inputSet id="_z5WnoCmYEemwrIA9FU7w-g">
-          <bpmn2:dataInputRefs>_EED6E0A1-B442-424F-9919-CA2B8877615A_MethodInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_EED6E0A1-B442-424F-9919-CA2B8877615A_ContentDataInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_EED6E0A1-B442-424F-9919-CA2B8877615A_UrlInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_EED6E0A1-B442-424F-9919-CA2B8877615A_TaskNameInputX</bpmn2:dataInputRefs>
-        </bpmn2:inputSet>
-        <bpmn2:outputSet id="_z5WnoSmYEemwrIA9FU7w-g">
-          <bpmn2:dataOutputRefs>_EED6E0A1-B442-424F-9919-CA2B8877615A_ResultOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
-      </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_z5WnoimYEemwrIA9FU7w-g">
-        <bpmn2:targetRef>_EED6E0A1-B442-424F-9919-CA2B8877615A_MethodInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_z5WnoymYEemwrIA9FU7w-g">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_z5WnpCmYEemwrIA9FU7w-g"><![CDATA[POST]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_z5WnpSmYEemwrIA9FU7w-g">_EED6E0A1-B442-424F-9919-CA2B8877615A_MethodInputX</bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_z5WnpimYEemwrIA9FU7w-g">
-        <bpmn2:sourceRef>goals</bpmn2:sourceRef>
-        <bpmn2:targetRef>_EED6E0A1-B442-424F-9919-CA2B8877615A_ContentDataInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_z5WnpymYEemwrIA9FU7w-g">
-        <bpmn2:sourceRef>targetURL</bpmn2:sourceRef>
-        <bpmn2:targetRef>_EED6E0A1-B442-424F-9919-CA2B8877615A_UrlInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_z5WnqCmYEemwrIA9FU7w-g">
-        <bpmn2:targetRef>_EED6E0A1-B442-424F-9919-CA2B8877615A_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_z5WnqSmYEemwrIA9FU7w-g">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_z5WnqimYEemwrIA9FU7w-g"><![CDATA[Rest]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_z5WnqymYEemwrIA9FU7w-g">_EED6E0A1-B442-424F-9919-CA2B8877615A_TaskNameInputX</bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_z5WnrCmYEemwrIA9FU7w-g">
-        <bpmn2:sourceRef>_EED6E0A1-B442-424F-9919-CA2B8877615A_ResultOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>goals</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
-    </bpmn2:task>
+    
     <bpmn2:userTask id="_C9936DA3-589B-481F-B20C-B36E0F4DD5D4" name="Check User Meds">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
