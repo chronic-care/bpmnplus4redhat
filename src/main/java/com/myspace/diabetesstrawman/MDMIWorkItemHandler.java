@@ -124,8 +124,8 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	                }
 	            };
 	            String responseBody = httpclient.execute(request, responseHandler);
-	            System.out.println("----------------------------------------");
-	            System.out.println(responseBody);
+	            logger.debug("----------------------------------------");
+	            logger.debug(responseBody);
 	            return responseBody; 
 	        }
 	    
@@ -155,13 +155,13 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	
 	public static Object mergeInstances(String resultClass, Object source, Object target) {
 		try {
-			System.out.println("mergeInstances " + resultClass);
+			logger.debug("mergeInstances " + resultClass);
 			if (source != null && target != null) {
-				System.out.println("mergeInstances " + resultClass);
+				logger.debug("mergeInstances " + resultClass);
 				Class<?> resultClassDefinition = Class.forName(resultClass);
 				Field[] fields = resultClassDefinition.getDeclaredFields();
 				for (Field field : fields) {
-					System.out.println("mergeInstances " + field.getName());
+					logger.debug("mergeInstances " + field.getName());
 					field.getModifiers();
 					if (Modifier.isStatic(field.getModifiers()) && Modifier.isFinal(field.getModifiers()))  {
 						continue;
@@ -172,7 +172,7 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 					}
 				}
 			} else {
-				System.out.println("mergeInstances source == null && target == null " + resultClass);
+				logger.debug("mergeInstances source == null && target == null " + resultClass);
 			}
 		} catch (IllegalArgumentException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();

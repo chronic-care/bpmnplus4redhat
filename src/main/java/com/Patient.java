@@ -1,5 +1,6 @@
 package com;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ public class Patient implements java.io.Serializable {
 	public  java.lang.String patientDOB;
 
 	@org.kie.api.definition.type.Label("Conditions")
-	public java.util.List<CodedElement> conditions;
+	public java.util.List<CodedElement> conditions = new ArrayList<CodedElement>();
 	
 	@org.kie.api.definition.type.Label("Comorbidity Status")
 	public java.lang.String comorbidityStatus = "ABSENT";
@@ -33,7 +34,7 @@ public class Patient implements java.io.Serializable {
 	public java.lang.String microvascularComplications  = "ABSENT";
 
 	@org.kie.api.definition.type.Label(value = "Medications")
-	public java.util.List<CodedElement> medications;
+	public java.util.List<CodedElement> medications = new ArrayList<CodedElement>();;
 	
 	@org.kie.api.definition.type.Label("Blood Sugar")
 	public Integer bloodSugar;
@@ -139,12 +140,9 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public void setConditions(java.util.List<CodedElement> conditions) {
-		if (this.conditions != null && conditions != null) {
+		if (conditions != null) {
 			this.conditions.addAll(conditions);
-		} else if (conditions != null) {
-			this.conditions = conditions;
 		}
-
 	}
 
 	public void setComorbidityStatus(java.lang.String comorbidityStatus) {
@@ -168,7 +166,9 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public void setMedications(java.util.List<CodedElement> medications) {
-		this.medications = medications;
+		if (medications != null) {
+			this.medications.addAll(medications);
+		}
 	}
 
 	public void setMicrovascularComplications(
