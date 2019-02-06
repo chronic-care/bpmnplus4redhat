@@ -9,6 +9,28 @@ import java.util.List;
 @javax.xml.bind.annotation.XmlRootElement
 public class Patient implements java.io.Serializable {
 
+	public CodedElement getMedicationRequestCode() {
+		if (medicationRequestCode == null) {
+			medicationRequestCode = new CodedElement();
+		}
+		return medicationRequestCode;
+	}
+
+	public void setMedicationRequestCode(CodedElement medicationRequestCode) {
+		this.medicationRequestCode = medicationRequestCode;
+	}
+
+	public java.lang.String getMedicationRequestSIG() {
+		if (medicationRequestSIG == null) {
+			medicationRequestSIG = "";
+		}
+		return medicationRequestSIG;
+	}
+
+	public void setMedicationRequestSIG(java.lang.String medicationRequestSIG) {
+		this.medicationRequestSIG = medicationRequestSIG;
+	}
+
 	static final long serialVersionUID = 1L;
 
 

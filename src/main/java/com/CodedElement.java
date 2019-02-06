@@ -4,8 +4,8 @@ public class CodedElement implements java.io.Serializable {
 	
 	static final long serialVersionUID = 1L;
 	
-	public String code;
-	public String displayName;
+	public String code = "";
+	public String displayName = "";
 
 	public String getCode() {
 		return code;

@@ -1,6 +1,8 @@
 package com;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 /**
@@ -40,6 +42,15 @@ public class SampleBundles implements java.io.Serializable {
 	public static String createGoal(Object object) {
 	    Patient patient =(Patient)object;
 		return G2.replace("iiii", UUID.randomUUID().toString()).replace("pppp", patient.patientID).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
+	}
+	
+	private final static String M2 = "{\"id\": \"iiii\",\"resourceType\": \"MedicationRequest\",\"subject\": {\"reference\": \"Patient/pppp\"},\"requester\": {\"agent\": {\"reference\": \"Practitioner/cc-prac-carlson-john\"}},\"status\": \"active\",\"authoredOn\": \"dddd\",\"medicationCodeableConcept\": {\"coding\": [{\"system\": \"dsds\",\"code\": \"cccc\",\"display\": \"dsds\"}],\"text\": \"dsds\"},\"dosageInstruction\": [{\"text\": \"sig\",\"route\": {\"coding\": [{\"system\": \"http://snomed.info/sct [snomed.info]\",\"code\": \"26643006\",\"display\": \"Oral route\"}],\"text\": \"Oral route\"}}]}";
+	
+	public static String createMedicationRequest(Object object) {
+	    Patient patient =(Patient)object;
+	    
+	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
 	}
 	 
 
