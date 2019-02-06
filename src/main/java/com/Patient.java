@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Patient implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label(value = "Metformin Status")
-	private java.lang.String metforminStatus;
+	public java.lang.String metforminStatus;
 
 	public CodedElement getMedicationRequestCode() {
 		if (medicationRequestCode == null) {
