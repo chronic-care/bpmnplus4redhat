@@ -43,7 +43,7 @@ public class SampleBundles implements java.io.Serializable {
 		return G2.replace("iiii", UUID.randomUUID().toString()).replace("pppp", patient.patientID).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
 	}
 	
-	private final static String M2 = "{\"id\": \"iiii\", \"meta\": {\"tag\": [{\"system\": \"BPMN\",\"display\": \"BPMN\"}]},   \"resourceType\": \"MedicationRequest\",\"subject\": {\"reference\": \"Patient/pppp\"},\"requester\": {\"agent\": {\"reference\": \"Practitioner/cc-prac-carlson-john\"}},\"status\": \"active\",\"authoredOn\": \"dddd\",\"medicationCodeableConcept\": {\"coding\": [{\"system\": \"dsds\",\"code\": \"cccc\",\"display\": \"dsds\"}],\"text\": \"dsds\"},\"dosageInstruction\": [{\"text\": \"sig\",\"route\": {\"coding\": [{\"system\": \"http://snomed.info/sct [snomed.info]\",\"code\": \"26643006\",\"display\": \"Oral route\"}],\"text\": \"Oral route\"}}]}";
+	private final static String M2 = "{\"id\": \"iiii\", \"meta\": {\"tag\": [{\"system\": \"BPMN\",\"display\": \"BPMN\"}]},   \"resourceType\": \"MedicationRequest\",\"subject\": {\"reference\": \"pppp\"},\"requester\": {\"agent\": {\"reference\": \"Practitioner/cc-prac-carlson-john\"}},\"status\": \"active\",\"authoredOn\": \"dddd\",\"medicationCodeableConcept\": {\"coding\": [{\"system\": \"dsds\",\"code\": \"cccc\",\"display\": \"dsds\"}],\"text\": \"dsds\"},\"dosageInstruction\": [{\"text\": \"sig\",\"route\": {\"coding\": [{\"system\": \"http://snomed.info/sct [snomed.info]\",\"code\": \"26643006\",\"display\": \"Oral route\"}],\"text\": \"Oral route\"}}]}";
 	
 	public static String createMedicationRequest(Object object) {
 	    Patient patient =(Patient)object;
@@ -51,7 +51,7 @@ public class SampleBundles implements java.io.Serializable {
 		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
 	}
 	 
-	private final static String R2 = "{\"resourceType\":  \"meta\": {\"tag\": [{\"system\": \"BPMN\",\"display\": \"BPMN\"}]},   \"ProcedureRequest\",\"id\": \"iiii\",\"subject\": {\"reference\": \"Patient/pppp\"},\"requester\": \"Practitioner/cc-prac-carlson-john\",\"performer\": \"Practitioner/cc-prac-carlson-fred\",\"status\": \"active\",\"authoredOn\" : \"dddd\",\"basedOn\": {\"reference\": \"Condition/V_500HS_9000011_926\"},\"code\" :{\"coding\": [{\"system\": \"http://snomed.info/sct\",\"code\": \"3457005\",\"display\": \"Patient referral (procedure)\"}]}}";
+	private final static String R2 = "{\"resourceType\":  \"meta\": {\"tag\": [{\"system\": \"BPMN\",\"display\": \"BPMN\"}]},   \"ProcedureRequest\",\"id\": \"iiii\",\"subject\": {\"reference\": \"pppp\"},\"requester\": \"Practitioner/cc-prac-carlson-john\",\"performer\": \"Practitioner/cc-prac-carlson-fred\",\"status\": \"active\",\"authoredOn\" : \"dddd\",\"basedOn\": {\"reference\": \"Condition/V_500HS_9000011_926\"},\"code\" :{\"coding\": [{\"system\": \"http://snomed.info/sct\",\"code\": \"3457005\",\"display\": \"Patient referral (procedure)\"}]}}";
 	public static String createReferralRequest(Object object) {
 	    Patient patient =(Patient)object;
 	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
