@@ -41,10 +41,10 @@
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>MEDIFORM</header>
+          <header>Metformin Status</header>
           <constraintValueType>1</constraintValueType>
-          <factField>severeStatus</factField>
-          <fieldType>Boolean</fieldType>
+          <factField>metforminStatus</factField>
+          <fieldType>String</fieldType>
           <operator>==</operator>
           <valueList>NONE,LESS,GREATER</valueList>
           <parameters/>
@@ -125,8 +125,26 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>OK</valueString>
+        <valueString>ABOVE</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>NONE</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>Add metformin at 500 mg tablet 1 times per day</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+    <list>
+      <value>
+        <valueNumeric class="int">2</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -135,7 +153,45 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Add metformin at 500 mg tablet 1 times per day</valueString>
+        <valueString>ABOVE</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>LESS</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>Increase metformin to 1000mg table  2 times per day</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+    <list>
+      <value>
+        <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>BELOW</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>GREATER</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>Decrease metformin to 1000 mg tablet 2 time per day</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
