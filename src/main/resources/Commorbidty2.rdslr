@@ -1,4 +1,5 @@
 import java.lang.Number;
+import com.Patient;
 
 rule "Commorbidty2"
 	dialect "mvel"
