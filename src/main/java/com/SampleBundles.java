@@ -48,14 +48,14 @@ public class SampleBundles implements java.io.Serializable {
 	public static String createMedicationRequest(Object object) {
 	    Patient patient =(Patient)object;
 	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
+		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
 	}
 	 
 	private final static String R2 = "{\"resourceType\":  \"meta\": {\"tag\": [{\"system\": \"BPMN\",\"display\": \"BPMN\"}]},   \"ProcedureRequest\",\"id\": \"iiii\",\"subject\": {\"reference\": \"pppp\"},\"requester\": \"Practitioner/cc-prac-carlson-john\",\"performer\": \"Practitioner/cc-prac-carlson-fred\",\"status\": \"active\",\"authoredOn\" : \"dddd\",\"basedOn\": {\"reference\": \"Condition/V_500HS_9000011_926\"},\"code\" :{\"coding\": [{\"system\": \"http://snomed.info/sct\",\"code\": \"3457005\",\"display\": \"Patient referral (procedure)\"}]}}";
 	public static String createReferralRequest(Object object) {
 	    Patient patient =(Patient)object;
 	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));
+		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
 	}
 
 }
