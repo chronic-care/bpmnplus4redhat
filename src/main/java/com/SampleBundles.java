@@ -37,10 +37,8 @@ public class SampleBundles implements java.io.Serializable {
 
 	private final static String G2 = "{\"id\": \"iiii\",\"resourceType\": \"Goal\",\"status\": \"proposed\",\"subject\": {\"reference\": \"Patient/pppp\"},\"addresses\": [{  \"reference\": \"Condition/V_500HS_9000011_926\",  \"display\": \"Type 2 diabetes mellitus without complication\"}    ],    \"description\": {\"text\": \"Lower sugar intake\"    },\"target\": {\"measure\": {\"coding\": [{\"system\": \"http://snomed.info/\",\"code\": \"365845005\",\"display\": \"Haemoglobin A1C - diabetic control finding\"}],\"text\": \"Haemoglobin A1C - diabetic control finding\"},\"detailRange\": {\"low\": {\"value\": llll,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"},\"high\": {\"value\": hhhh,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"}}}}";
 //	private final static String GOALTEMPLATE = "{\"subject\": {  \"reference\": \"Patient/pppp\"    },\"goal\": {\"code\": {\"coding\": [{\"system\": \"http://snomed.info/\",\"code\": \"365845005\",\"display\": \"Haemoglobin A1C - diabetic control finding\"}],\"text\": \"Haemoglobin A1C - diabetic control finding\"},\"range\": {\"low\": {\"value\": llll,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"},\"high\": {\"value\": hhhh,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"}}}}"; 
-	public static String createGoal(Patient patient) {
-		
-		UUID.randomUUID().toString();
-		
+	public static String createGoal(Object object) {
+	    Patient patient =(Patient)object;
 		return G2.replace("iiii", UUID.randomUUID().toString()).replace("pppp", patient.patientID).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
 	}
 	 
