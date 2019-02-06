@@ -1,5 +1,7 @@
 package com;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -121,6 +123,23 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public java.lang.String getComorbidityStatus() {
+		this.comorbidityStatus = "ABSENT";
+//		if (!conditions.isEmpty()) {
+			for (CodedElement c : conditions) {
+				for (String s :  COMORBIDITYPRESENTCODES) {
+					if (s.equals(c.getCode())) {
+						this.comorbidityStatus = "PRESENT";
+						for (CodedElement cc : conditions) {
+ 							for (String s2 :  COMORBODITYMARKEDCODES) {
+								if (s2.equals(cc.getCode())) {
+									this.comorbidityStatus = "MARKED";
+								}
+							}							
+						}
+					}
+				}
+			}
+//		}
 		return this.comorbidityStatus;
 	}
 
@@ -145,6 +164,16 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public java.lang.String getMicrovascularComplications() {
+		
+		this.microvascularComplications = "ABSENT";
+		
+		for (CodedElement c : conditions) {
+			for (String s :  MICROVASCULARCODES) {
+				if (s.equals(c.getCode())) {
+					this.microvascularComplications = "PRESENT";
+				}
+			}
+		}
 		return this.microvascularComplications;
 	}
 
@@ -230,8 +259,8 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public void setLatestRange() {
-		this.latestHBA1C = ThreadLocalRandom.current().nextDouble(
-				this.hbA1cRangeLow - 0.5, this.hbA1cRangeHigh + 0.5);
+		this.latestHBA1C =  new BigDecimal(ThreadLocalRandom.current().nextDouble(
+				this.hbA1cRangeLow - 0.5, this.hbA1cRangeHigh + 0.5)).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
 	}
 
 	public java.lang.String getMetforminStatus() {
@@ -273,4 +302,51 @@ public class Patient implements java.io.Serializable {
 		this.medicationRequestSIG = medicationRequestSIG;
 	}
 
+	public void calculateHBA1CStatus() {
+		if (latestHBA1C <= hbA1cRangeLow) {
+			hba1cStatus = "BELOW";
+		} else if (latestHBA1C >= hbA1cRangeHigh) {
+			hba1cStatus = "BELOW";
+		} else {
+			hba1cStatus = "OK";
+		}
+	}
+	
+	
+	final static String COMORBIDITYPRESENTCODES[] = {
+			"I48.0",
+			"42343007",
+			"443254009",
+			"443343001",
+			"194734000",
+			"195080001",
+			"57054005",
+			"I50.30",
+			"56218007",
+			"59621000",
+			"426749004",
+			"49436004",
+			"400047006",
+			"709044004",
+			"N18.6",
+			"14669001",
+			"13645005",
+			"B18.2",
+			"129834002",
+			"44054006",
+			"28876000"
+	};
+	
+	final static String COMORBODITYMARKEDCODES[] = {
+			"231482005",
+			"7200002"
+	};
+	
+	
+	final static String MICROVASCULARCODES[] = {
+			  "4855003",
+			"400047006",
+			"424736006"
+	};
+	
 }
