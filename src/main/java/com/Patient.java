@@ -10,6 +10,9 @@ import java.util.concurrent.ThreadLocalRandom;
 @javax.xml.bind.annotation.XmlRootElement
 public class Patient implements java.io.Serializable {
 
+	@org.kie.api.definition.type.Label(value = "Metformin Status")
+	private java.lang.String metforminStatus;
+
 	public CodedElement getMedicationRequestCode() {
 		if (medicationRequestCode == null) {
 			medicationRequestCode = new CodedElement();
@@ -34,34 +37,33 @@ public class Patient implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-
 	@org.kie.api.definition.type.Label("Patient ID")
 	public java.lang.String patientID;
 
-	@org.kie.api.definition.type.Label(value = "Patient Name")
-	public  java.lang.String patientName;
+	@org.kie.api.definition.type.Label("Patient Name")
+	public java.lang.String patientName;
 
 	@org.kie.api.definition.type.Label("Patient Gender")
 	public java.lang.String patientGender;
-	
+
 	@org.kie.api.definition.type.Label("Patient DOB")
-	public  java.lang.String patientDOB;
+	public java.lang.String patientDOB;
 
 	@org.kie.api.definition.type.Label("Conditions")
 	public java.util.List<CodedElement> conditions = new ArrayList<CodedElement>();
-	
+
 	@org.kie.api.definition.type.Label("Comorbidity Status")
 	public java.lang.String comorbidityStatus = "ABSENT";
-	
-	@org.kie.api.definition.type.Label("Microvascular Complications")
-	public java.lang.String microvascularComplications  = "ABSENT";
 
-	@org.kie.api.definition.type.Label(value = "Medications")
+	@org.kie.api.definition.type.Label("Microvascular Complications")
+	public java.lang.String microvascularComplications = "ABSENT";
+
+	@org.kie.api.definition.type.Label("Medications")
 	public java.util.List<CodedElement> medications = new ArrayList<CodedElement>();;
-	
+
 	@org.kie.api.definition.type.Label("Blood Sugar")
 	public Integer bloodSugar;
-	
+
 	@org.kie.api.definition.type.Label("HBA1C Range High")
 	public double hbA1cRangeHigh;
 
@@ -69,29 +71,30 @@ public class Patient implements java.io.Serializable {
 	public double hbA1cRangeLow;
 
 	@org.kie.api.definition.type.Label("HBA1C Status")
-	public java.lang.String hba1cStatus ="OK";
+	public java.lang.String hba1cStatus = "OK";
 
 	@org.kie.api.definition.type.Label("Latest HBA1C")
 	public double latestHBA1C;
 
 	@org.kie.api.definition.type.Label("Severity")
 	public java.lang.Boolean severeStatus;
-	
+
 	@org.kie.api.definition.type.Label("Medication Request Code")
 	public CodedElement medicationRequestCode;
-	
+
 	@org.kie.api.definition.type.Label("Medication Request SIG")
 	public java.lang.String medicationRequestSIG;
-	
-	
+
 	public Patient() {
 		this.severeStatus = false;
 	}
 
-	public Patient(String patientID, Integer bloodSugar, double hbA1cRangeLow, double hbA1cRangeHigh,
-			String patientGender, Boolean severeStatus, List<CodedElement> conditions, String comorbidityStatus,
-			String microvascularComplications, double latestHBA1C, String hba1cStatus, String patientDOB,
-			String patientName, java.util.List<CodedElement> medications) {
+	public Patient(String patientID, Integer bloodSugar, double hbA1cRangeLow,
+			double hbA1cRangeHigh, String patientGender, Boolean severeStatus,
+			List<CodedElement> conditions, String comorbidityStatus,
+			String microvascularComplications, double latestHBA1C,
+			String hba1cStatus, String patientDOB, String patientName,
+			java.util.List<CodedElement> medications) {
 		super();
 		this.patientID = patientID;
 		this.bloodSugar = bloodSugar;
@@ -227,7 +230,47 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public void setLatestRange() {
-		this.latestHBA1C=ThreadLocalRandom.current().nextDouble(this.hbA1cRangeLow - 0.5, this.hbA1cRangeHigh+0.5);
+		this.latestHBA1C = ThreadLocalRandom.current().nextDouble(
+				this.hbA1cRangeLow - 0.5, this.hbA1cRangeHigh + 0.5);
 	}
- 
+
+	public java.lang.String getMetforminStatus() {
+		return this.metforminStatus;
+	}
+
+	public void setMetforminStatus(java.lang.String metforminStatus) {
+		this.metforminStatus = metforminStatus;
+	}
+
+	public Patient(java.lang.String metforminStatus,
+			java.lang.String patientID, java.lang.String patientName,
+			java.lang.String patientGender, java.lang.String patientDOB,
+			java.util.List<com.CodedElement> conditions,
+			java.lang.String comorbidityStatus,
+			java.lang.String microvascularComplications,
+			java.util.List<com.CodedElement> medications,
+			java.lang.Integer bloodSugar, double hbA1cRangeHigh,
+			double hbA1cRangeLow, java.lang.String hba1cStatus,
+			double latestHBA1C, java.lang.Boolean severeStatus,
+			com.CodedElement medicationRequestCode,
+			java.lang.String medicationRequestSIG) {
+		this.metforminStatus = metforminStatus;
+		this.patientID = patientID;
+		this.patientName = patientName;
+		this.patientGender = patientGender;
+		this.patientDOB = patientDOB;
+		this.conditions = conditions;
+		this.comorbidityStatus = comorbidityStatus;
+		this.microvascularComplications = microvascularComplications;
+		this.medications = medications;
+		this.bloodSugar = bloodSugar;
+		this.hbA1cRangeHigh = hbA1cRangeHigh;
+		this.hbA1cRangeLow = hbA1cRangeLow;
+		this.hba1cStatus = hba1cStatus;
+		this.latestHBA1C = latestHBA1C;
+		this.severeStatus = severeStatus;
+		this.medicationRequestCode = medicationRequestCode;
+		this.medicationRequestSIG = medicationRequestSIG;
+	}
+
 }
