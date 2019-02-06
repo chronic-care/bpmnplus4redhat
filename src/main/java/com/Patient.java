@@ -54,6 +54,13 @@ public class Patient implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Severity")
 	public java.lang.Boolean severeStatus;
 	
+	@org.kie.api.definition.type.Label("Medication Request Code")
+	public CodedElement medicationRequestCode;
+	
+	@org.kie.api.definition.type.Label("Medication Request SIG")
+	public java.lang.String medicationRequestSIG;
+	
+	
 	public Patient() {
 		this.severeStatus = false;
 	}
