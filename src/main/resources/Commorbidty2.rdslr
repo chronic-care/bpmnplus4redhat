@@ -1,0 +1,7 @@
+import java.lang.Number;
+
+rule "Commorbidty2"
+	dialect "mvel"
+	when
+	then
+end
