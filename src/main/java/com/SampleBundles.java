@@ -38,7 +38,6 @@ public class SampleBundles implements java.io.Serializable {
 	}
 
 	private final static String G2 = "{\"id\": \"iiii\",\"resourceType\": \"Goal\",\"status\": \"proposed\",\"subject\": {\"reference\": \"Patient/pppp\"},\"addresses\": [{  \"reference\": \"Condition/V_500HS_9000011_926\",  \"display\": \"Type 2 diabetes mellitus without complication\"}    ],    \"description\": {\"text\": \"Lower sugar intake\"    },\"target\": {\"measure\": {\"coding\": [{\"system\": \"http://snomed.info/\",\"code\": \"365845005\",\"display\": \"Haemoglobin A1C - diabetic control finding\"}],\"text\": \"Haemoglobin A1C - diabetic control finding\"},\"detailRange\": {\"low\": {\"value\": llll,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"},\"high\": {\"value\": hhhh,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"}}}}";
-//	private final static String GOALTEMPLATE = "{\"subject\": {  \"reference\": \"Patient/pppp\"    },\"goal\": {\"code\": {\"coding\": [{\"system\": \"http://snomed.info/\",\"code\": \"365845005\",\"display\": \"Haemoglobin A1C - diabetic control finding\"}],\"text\": \"Haemoglobin A1C - diabetic control finding\"},\"range\": {\"low\": {\"value\": llll,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"},\"high\": {\"value\": hhhh,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"}}}}"; 
 	public static String createGoal(Object object) {
 	    Patient patient =(Patient)object;
 		return G2.replace("iiii", UUID.randomUUID().toString()).replace("pppp", patient.patientID).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
@@ -48,11 +47,15 @@ public class SampleBundles implements java.io.Serializable {
 	
 	public static String createMedicationRequest(Object object) {
 	    Patient patient =(Patient)object;
-	    
 	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
 		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
 	}
 	 
-
+	private final static String R2 = "{\"resourceType\": \"ProcedureRequest\",\"id\": \"iiii\",\"subject\": {\"reference\": \"Patient/pppp\"},\"requester\": \"Practitioner/cc-prac-carlson-john\",\"performer\": \"Practitioner/cc-prac-carlson-fred\",\"status\": \"active\",\"authoredOn\" : \"dddd\",\"basedOn\": {\"reference\": \"Condition/V_500HS_9000011_926\"},\"code\" :{\"coding\": [{\"system\": \"http://snomed.info/sct\",\"code\": \"3457005\",\"display\": \"Patient referral (procedure)\"}]}}";
+	public static String createReferralRequest(Object object) {
+	    Patient patient =(Patient)object;
+	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
+	}
 
 }
