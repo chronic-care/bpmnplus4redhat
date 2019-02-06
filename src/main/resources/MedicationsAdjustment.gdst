@@ -43,10 +43,10 @@
           <width>100</width>
           <header>MEDIFORM</header>
           <constraintValueType>1</constraintValueType>
-          <factField>bloodSugar</factField>
-          <fieldType>Integer</fieldType>
+          <factField>severeStatus</factField>
+          <fieldType>Boolean</fieldType>
           <operator>==</operator>
-          <valueList>NONE,LESSTHAN,GREATERTHAN</valueList>
+          <valueList>NONE,LESS,GREATER</valueList>
           <parameters/>
           <binding></binding>
         </condition-column52>
