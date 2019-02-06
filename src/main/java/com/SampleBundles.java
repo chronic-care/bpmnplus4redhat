@@ -55,7 +55,7 @@ public class SampleBundles implements java.io.Serializable {
 	public static String createReferralRequest(Object object) {
 	    Patient patient =(Patient)object;
 	    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
-		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
+		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));
 	}
 
 }
