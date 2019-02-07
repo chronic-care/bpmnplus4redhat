@@ -2,9 +2,8 @@ import com.Patient;
 
 rule "PatientHBA1CStatus"
 	dialect "mvel"
-	ruleflow-group "patientHBA1CStatus"
 	when
-		patient : Patient( patient.latestHBA1C <= patient.hbA1cRangeHigh && patient.latestHBA1C >= patient.hbA1cRangeLow : hba1cStatus : hba1cStatus )
+		patient : Patient( latestHBA1C <= patient.hbA1cRangeHigh )
 	then
-	modify (patient) ( hba1cStatus = "OK");
+		patient.setHba1cStatus( "OK" );
 end
