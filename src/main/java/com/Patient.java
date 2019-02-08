@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Patient implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label(value = "Metformin Status")
-	public java.lang.String metforminStatus;
+	public java.lang.String metforminStatus = "NONE";
 
 	public CodedElement getMedicationRequestCode() {
 		if (medicationRequestCode == null) {
@@ -73,7 +73,7 @@ public class Patient implements java.io.Serializable {
 	public double hbA1cRangeLow;
 
 	@org.kie.api.definition.type.Label("HBA1C Status")
-	public java.lang.String hba1cStatus = "NOTOK";
+	public java.lang.String hba1cStatus = "ABOVE";
 
 	@org.kie.api.definition.type.Label("Latest HBA1C")
 	public double latestHBA1C;
