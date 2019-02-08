@@ -2,6 +2,8 @@ package com.myspace.diabetesstrawman;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
@@ -168,7 +170,13 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 					}
 					Object value = field.get(source);
 					if (value != null) {
-						field.set(target, value);
+						
+						if (value instanceof List) {
+							List targetList = (List) field.get(target);
+							targetList.addAll((List) value);
+						} else {						
+							field.set(target, value);
+						}
 					}
 				}
 			} else {
