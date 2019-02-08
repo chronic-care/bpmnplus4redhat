@@ -73,7 +73,7 @@ public class Patient implements java.io.Serializable {
 	public double hbA1cRangeLow;
 
 	@org.kie.api.definition.type.Label("HBA1C Status")
-	public java.lang.String hba1cStatus = "OK";
+	public java.lang.String hba1cStatus = "NOTOK";
 
 	@org.kie.api.definition.type.Label("Latest HBA1C")
 	public double latestHBA1C;
