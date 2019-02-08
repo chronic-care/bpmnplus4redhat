@@ -306,7 +306,7 @@ public class Patient implements java.io.Serializable {
 		if (latestHBA1C <= hbA1cRangeLow) {
 			hba1cStatus = "BELOW";
 		} else if (latestHBA1C >= hbA1cRangeHigh) {
-			hba1cStatus = "BELOW";
+			hba1cStatus = "ABOVE";
 		} else {
 			hba1cStatus = "OK";
 		}
