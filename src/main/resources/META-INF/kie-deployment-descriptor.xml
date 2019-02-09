@@ -26,7 +26,7 @@
     <environment-entries>
         <environment-entry>
             <resolver>mvel</resolver>
-            <identifier>new String("http://ec2-34-202-1-189.compute-1.amazonaws.com:8090/");</identifier>
+            <identifier>new String("http://kafka-microservices:8080/");</identifier>
             <parameters/>
             <name>BaseURL</name>
         </environment-entry>
