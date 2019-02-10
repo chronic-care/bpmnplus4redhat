@@ -308,13 +308,6 @@ public class Patient implements java.io.Serializable {
 	}
 
  
-
- 
-
-	public void addANewPatientGoal(com.CodedElement newPatientGoal) {
-		this.patientGoals.add(newPatientGoal);
-	}
-
 	public Patient(java.lang.String metforminStatus,
 			java.util.List<com.CodedElement> patientGoals,
 		  java.lang.String patientID,
