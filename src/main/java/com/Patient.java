@@ -305,7 +305,9 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public void setPatientGoals(java.util.List<com.CodedElement> patientGoals) {
-		this.patientGoals = patientGoals;
+	    	if (patientGoals != null) {
+			this.patientGoals.addAll(patientGoals);
+		}
 	}
 
  
