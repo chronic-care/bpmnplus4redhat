@@ -12,8 +12,14 @@ import java.util.concurrent.ThreadLocalRandom;
 @javax.xml.bind.annotation.XmlRootElement
 public class Patient implements java.io.Serializable {
 
-	@org.kie.api.definition.type.Label(value = "Metformin Status")
+	@org.kie.api.definition.type.Label("Metformin Status")
 	public java.lang.String metforminStatus = "NONE";
+
+	@org.kie.api.definition.type.Label("Patient Goals")
+	public java.util.List<com.CodedElement> patientGoals = new ArrayList<CodedElement>();
+
+	@org.kie.api.definition.type.Label(value = "New Patient Goal")
+    public com.CodedElement newPatientGoal;
 
 	public CodedElement getMedicationRequestCode() {
 		if (medicationRequestCode == null) {
@@ -124,22 +130,22 @@ public class Patient implements java.io.Serializable {
 
 	public java.lang.String getComorbidityStatus() {
 		this.comorbidityStatus = "ABSENT";
-//		if (!conditions.isEmpty()) {
-			for (CodedElement c : conditions) {
-				for (String s :  COMORBIDITYPRESENTCODES) {
-					if (s.equals(c.getCode())) {
-						this.comorbidityStatus = "PRESENT";
-						for (CodedElement cc : conditions) {
- 							for (String s2 :  COMORBODITYMARKEDCODES) {
-								if (s2.equals(cc.getCode())) {
-									this.comorbidityStatus = "MARKED";
-								}
-							}							
+		// if (!conditions.isEmpty()) {
+		for (CodedElement c : conditions) {
+			for (String s : COMORBIDITYPRESENTCODES) {
+				if (s.equals(c.getCode())) {
+					this.comorbidityStatus = "PRESENT";
+					for (CodedElement cc : conditions) {
+						for (String s2 : COMORBODITYMARKEDCODES) {
+							if (s2.equals(cc.getCode())) {
+								this.comorbidityStatus = "MARKED";
+							}
 						}
 					}
 				}
 			}
-//		}
+		}
+		// }
 		return this.comorbidityStatus;
 	}
 
@@ -164,11 +170,11 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public java.lang.String getMicrovascularComplications() {
-		
+
 		this.microvascularComplications = "ABSENT";
-		
+
 		for (CodedElement c : conditions) {
-			for (String s :  MICROVASCULARCODES) {
+			for (String s : MICROVASCULARCODES) {
 				if (s.equals(c.getCode())) {
 					this.microvascularComplications = "PRESENT";
 				}
@@ -259,8 +265,10 @@ public class Patient implements java.io.Serializable {
 	}
 
 	public void setLatestRange() {
-		this.latestHBA1C =  new BigDecimal(ThreadLocalRandom.current().nextDouble(
-				this.hbA1cRangeLow - 0.5, this.hbA1cRangeHigh + 0.5)).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+		this.latestHBA1C = new BigDecimal(
+				ThreadLocalRandom.current().nextDouble(
+						this.hbA1cRangeLow - 0.5, this.hbA1cRangeHigh + 0.5))
+				.setScale(2, RoundingMode.HALF_EVEN).doubleValue();
 	}
 
 	public java.lang.String getMetforminStatus() {
@@ -271,9 +279,51 @@ public class Patient implements java.io.Serializable {
 		this.metforminStatus = metforminStatus;
 	}
 
+	public void calculateHBA1CStatus() {
+		if (latestHBA1C <= hbA1cRangeLow) {
+			hba1cStatus = "BELOW";
+		} else if (latestHBA1C >= hbA1cRangeHigh) {
+			hba1cStatus = "ABOVE";
+		} else {
+			hba1cStatus = "OK";
+		}
+	}
+
+	final static String COMORBIDITYPRESENTCODES[] = {"I48.0", "42343007",
+			"443254009", "443343001", "194734000", "195080001", "57054005",
+			"I50.30", "56218007", "59621000", "426749004", "49436004",
+			"400047006", "709044004", "N18.6", "14669001", "13645005", "B18.2",
+			"129834002", "44054006", "28876000"};
+
+	final static String COMORBODITYMARKEDCODES[] = {"231482005", "7200002"};
+
+	final static String MICROVASCULARCODES[] = {"4855003", "400047006",
+			"424736006"};
+
+	public java.util.List<com.CodedElement> getPatientGoals() {
+		return this.patientGoals;
+	}
+
+	public void setPatientGoals(java.util.List<com.CodedElement> patientGoals) {
+		this.patientGoals = patientGoals;
+	}
+
+ 
+
+	public com.CodedElement getNewPatientGoal() {
+		return this.newPatientGoal;
+	}
+
+	public void setNewPatientGoal(com.CodedElement newPatientGoal) {
+		this.newPatientGoal = newPatientGoal;
+		this.patientGoals.add(newPatientGoal);
+	}
+
 	public Patient(java.lang.String metforminStatus,
-			java.lang.String patientID, java.lang.String patientName,
-			java.lang.String patientGender, java.lang.String patientDOB,
+			java.util.List<com.CodedElement> patientGoals,
+			com.CodedElement newPatientGoal, java.lang.String patientID,
+			java.lang.String patientName, java.lang.String patientGender,
+			java.lang.String patientDOB,
 			java.util.List<com.CodedElement> conditions,
 			java.lang.String comorbidityStatus,
 			java.lang.String microvascularComplications,
@@ -284,6 +334,8 @@ public class Patient implements java.io.Serializable {
 			com.CodedElement medicationRequestCode,
 			java.lang.String medicationRequestSIG) {
 		this.metforminStatus = metforminStatus;
+		this.patientGoals = patientGoals;
+		this.newPatientGoal = newPatientGoal;
 		this.patientID = patientID;
 		this.patientName = patientName;
 		this.patientGender = patientGender;
@@ -302,51 +354,4 @@ public class Patient implements java.io.Serializable {
 		this.medicationRequestSIG = medicationRequestSIG;
 	}
 
-	public void calculateHBA1CStatus() {
-		if (latestHBA1C <= hbA1cRangeLow) {
-			hba1cStatus = "BELOW";
-		} else if (latestHBA1C >= hbA1cRangeHigh) {
-			hba1cStatus = "ABOVE";
-		} else {
-			hba1cStatus = "OK";
-		}
-	}
-	
-	
-	final static String COMORBIDITYPRESENTCODES[] = {
-			"I48.0",
-			"42343007",
-			"443254009",
-			"443343001",
-			"194734000",
-			"195080001",
-			"57054005",
-			"I50.30",
-			"56218007",
-			"59621000",
-			"426749004",
-			"49436004",
-			"400047006",
-			"709044004",
-			"N18.6",
-			"14669001",
-			"13645005",
-			"B18.2",
-			"129834002",
-			"44054006",
-			"28876000"
-	};
-	
-	final static String COMORBODITYMARKEDCODES[] = {
-			"231482005",
-			"7200002"
-	};
-	
-	
-	final static String MICROVASCULARCODES[] = {
-			  "4855003",
-			"400047006",
-			"424736006"
-	};
-	
 }
