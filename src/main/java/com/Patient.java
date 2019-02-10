@@ -18,9 +18,6 @@ public class Patient implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Patient Goals")
 	public java.util.List<com.CodedElement> patientGoals = new ArrayList<CodedElement>();
 
-	@org.kie.api.definition.type.Label(value = "New Patient Goal")
-    public com.CodedElement newPatientGoal;
-
 	public CodedElement getMedicationRequestCode() {
 		if (medicationRequestCode == null) {
 			medicationRequestCode = new CodedElement();
@@ -312,18 +309,15 @@ public class Patient implements java.io.Serializable {
 
  
 
-	public com.CodedElement getNewPatientGoal() {
-		return this.newPatientGoal;
-	}
+ 
 
-	public void setNewPatientGoal(com.CodedElement newPatientGoal) {
-		this.newPatientGoal = newPatientGoal;
+	public void addANewPatientGoal(com.CodedElement newPatientGoal) {
 		this.patientGoals.add(newPatientGoal);
 	}
 
 	public Patient(java.lang.String metforminStatus,
 			java.util.List<com.CodedElement> patientGoals,
-			com.CodedElement newPatientGoal, java.lang.String patientID,
+		  java.lang.String patientID,
 			java.lang.String patientName, java.lang.String patientGender,
 			java.lang.String patientDOB,
 			java.util.List<com.CodedElement> conditions,
@@ -337,7 +331,7 @@ public class Patient implements java.io.Serializable {
 			java.lang.String medicationRequestSIG) {
 		this.metforminStatus = metforminStatus;
 		this.patientGoals = patientGoals;
-		this.newPatientGoal = newPatientGoal;
+	 
 		this.patientID = patientID;
 		this.patientName = patientName;
 		this.patientGender = patientGender;
