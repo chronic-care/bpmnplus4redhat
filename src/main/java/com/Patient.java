@@ -173,7 +173,7 @@ public class Patient implements java.io.Serializable {
 		for (CodedElement c : conditions) {
 			for (String s : MICROVASCULARCODES) {
 				if (s.equals(c.getCode())) {
-					this.microvascularComplications = "PRESENT";
+					this.microvascularComplications = "ADVANCED";
 				}
 			}
 		}
