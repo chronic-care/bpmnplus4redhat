@@ -175,7 +175,15 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 							List targetList = (List) field.get(target);
 							targetList.addAll((List) value);
 						} else {						
-							field.set(target, value);
+							if (value instanceof Double) {
+								Double d = (Double) value;
+								if (Double.compare(d, Double.valueOf(0.0)) > 0) {
+									field.set(target, value);
+								}
+							} else {
+
+								field.set(target, value);
+							}
 						}
 					}
 				}
