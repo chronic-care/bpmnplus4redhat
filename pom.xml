@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.perspecta.himss</groupId>
-  <artifactId>cod-plan-b-sean-2</artifactId>
+  <artifactId>ckd-treat-patient</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>kjar</packaging>
-  <name>cod-plan-b-sean-2</name>
+  <name>ckd-treat-patient</name>
   <description>KnowledgeServices</description>
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
