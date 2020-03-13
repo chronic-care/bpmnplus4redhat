@@ -1,0 +1,161 @@
+{
+    "resourceType": "GuidanceResponse",
+    "id": "c25ed80e-1eb9-4dce-9fe3-5286df233ef2",
+    "extension": [
+        {
+            "url": "http://perspecta.com/healthconcourse/guidance-module-canonical",
+            "valueString": "http://admin-smilecdr:8000/Library/ORG-1173-f4794c7b029b7f15f9f71bd971729b67|1"
+        },
+        {
+            "url": "http://perspecta.com/fhir/km/StructureDefinition/guidance-moduleset",
+            "valueString": "'patient-id:ORG-1214-hc-pat-gwenmodule-id:[ORG-1173-f4794c7b029b7f15f9f71bd971729b67]'"
+        }
+    ],
+    "status": "data-requested",
+    "subject": {
+        "id": "ORG-1214-hc-pat-gwen",
+        "reference": "Patient/ORG-1214-hc-pat-gwen"
+    },
+    "dataRequirement": [
+        {
+            "id": "Does-the-patient-have-a-structural-or-functional-abnormality-of-the-kidneys",
+            "extension": [
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/expectedCardinalityMin",
+                    "valueUnsignedInt": 1
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/requiredPath",
+                    "valueString": "clinicalStatus"
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/idFilter",
+                    "valueId": "ORG-1214-hc-cond-gwen-renal/_history/1"
+                }
+            ],
+            "type": "Condition",
+            "codeFilter": [
+                {
+                    "path": "patient",
+                    "valueCoding": [
+                        {
+                            "code": "ORG-1214-hc-pat-gwen"
+                        }
+                    ]
+                },
+                {
+                    "path": "code",
+                    "valueCoding": [
+                        {
+                            "code": "90708001"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "Does-the-patient-have-a-structural-or-functional-abnormality-of-the-kidneys-based-on-imaging-and-or-biochemical-tests",
+            "extension": [
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/expectedCardinalityMin",
+                    "valueUnsignedInt": 1
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/requiredPath",
+                    "valueString": "clinicalStatus"
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/idFilter",
+                    "valueId": "ORG-1214-hc-cond-gwen-renal/_history/1"
+                }
+            ],
+            "type": "Condition",
+            "codeFilter": [
+                {
+                    "path": "patient",
+                    "valueCoding": [
+                        {
+                            "code": "ORG-1214-hc-pat-gwen"
+                        }
+                    ]
+                },
+                {
+                    "path": "code",
+                    "valueCoding": [
+                        {
+                            "code": "90708001"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "duration-of-condition-in-months",
+            "extension": [
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/expectedCardinalityMin",
+                    "valueUnsignedInt": 1
+                }
+            ],
+            "type": "Observation",
+            "codeFilter": [
+                {
+                    "path": "patient",
+                    "valueCoding": [
+                        {
+                            "code": "ORG-1214-hc-pat-gwen"
+                        }
+                    ]
+                },
+                {
+                    "path": "code",
+                    "valueCoding": [
+                        {
+                            "code": "258706009"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "glomerular-filtration-rate-GFR",
+            "extension": [
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/expectedCardinalityMin",
+                    "valueUnsignedInt": 1
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/requiredPath",
+                    "valueString": "interpretation"
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/requiredPath",
+                    "valueString": "bodySite"
+                },
+                {
+                    "url": "http://perspecta.com/fhir/km/StructureDefinition/requiredPath",
+                    "valueString": "value"
+                }
+            ],
+            "type": "Observation",
+            "codeFilter": [
+                {
+                    "path": "patient",
+                    "valueCoding": [
+                        {
+                            "code": "ORG-1214-hc-pat-gwen"
+                        }
+                    ]
+                },
+                {
+                    "path": "code",
+                    "valueCoding": [
+                        {
+                            "code": "69405-9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

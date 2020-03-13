@@ -1,0 +1,90 @@
+{
+    "resourceType": "GuidanceResponse",
+    "id": "d29a7b58-a2ab-465d-9a98-e0b56e34ab73",
+    "contained": [
+        {
+            "resourceType": "ProcedureRequest",
+            "id": "17c3c72a-661f-411f-bafc-2f436bdf605a",
+            "status": "draft",
+            "intent": "order",
+            "code": {
+                "text": "Sample text"
+            },
+            "subject": {
+                "reference": "Patient/ORG-1118-hc-pat-cathy"
+            }
+        },
+        {
+            "resourceType": "Parameters",
+            "id": "1",
+            "parameter": [
+                {
+                    "name": "transformed-result",
+                    "valueBoolean": false
+                }
+            ]
+        },
+        {
+            "resourceType": "RequestGroup",
+            "id": "2",
+            "status": "completed",
+            "intent": "proposal",
+            "action": [
+                {
+                    "title": "Referral to emergency department",
+                    "description": "Patient has an urgent condition and should be sent to the emergency department.",
+                    "documentation": [
+                        {
+                            "type": "documentation",
+                            "display": "TABLE 2: Urgent/Emergent Conditions\n- Acute unexplained decline in kidney function\n- Heart failure/volume overload\n- Hyperkalemia (potassium ≥6 mEq/L)\n- Signs or symptoms of uremia"
+                        }
+                    ],
+                    "selectionBehavior": "all",
+                    "action": [
+                        {
+                            "title": "Sample label",
+                            "action": [
+                                {
+                                    "description": "Patient has an urgent condition and should be sent to the emergency department.",
+                                    "type": {
+                                        "code": "create"
+                                    },
+                                    "resource": {
+                                        "reference": "#17c3c72a-661f-411f-bafc-2f436bdf605a"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "extension": [
+        {
+            "url": "http://perspecta.com/healthconcourse/guidance-module-canonical",
+            "valueString": "http://admin-smilecdr:8000/Library/ORG-MotiveT1-HIMSSCKDIdUrgentCareDR2|1"
+        },
+        {
+            "url": "http://perspecta.com/fhir/km/StructureDefinition/guidance-moduleset",
+            "valueString": "'patient-id:ORG-1118-hc-pat-cathymodule-id:[ORG-MotiveT1-HIMSSCKDIdUrgentCareDR2]'"
+        }
+    ],
+    "status": "success",
+    "subject": {
+        "id": "ORG-1118-hc-pat-cathy",
+        "reference": "Patient/ORG-1118-hc-pat-cathy"
+    },
+    "occurrenceDateTime": "2020-02-24T16:26:05+00:00",
+    "evaluationMessage": [
+        {
+            "reference": "#17c3c72a-661f-411f-bafc-2f436bdf605a"
+        }
+    ],
+    "outputParameters": {
+        "reference": "#1"
+    },
+    "result": {
+        "reference": "#2"
+    }
+}

@@ -1,0 +1,13 @@
+nmd
+nmd
+guidanceDataRequirements = [{"clinicalStatement":"Condition","id":"ORG-1228-hc-cond-claire-hf-2/_history/1","clinicalStatementFilter":"http://snomed.info/sct|153931000119109","clinicalStatementDisplay":"Acute Heart Failure","path":"clinicalStatus","pathDisplay":"Clinical Status","type":"String","values":["active","recurrence","relapse","inactive","remission","resolved"],"value":null}]
+patientId = ORG-1228-hc-pat-claire
+guidanceResult = nmd
+
+
+nmd
+nmd
+nmd
+guidanceDataRequirements = [{"clinicalStatement":"Condition","id":"ORG-1228-hc-cond-claire-hf-2/_history/1","clinicalStatementFilter":"http://snomed.info/sct|153931000119109","clinicalStatementDisplay":"Acute Heart Failure","path":"clinicalStatus","pathDisplay":"Clinical Status","type":"String","values":["active","recurrence","relapse","inactive","remission","resolved"],"value":null}]
+patientId = ORG-1228-hc-pat-claire
+guidanceResult = nmd

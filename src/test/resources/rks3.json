@@ -1,0 +1,32 @@
+ [
+	{
+		"clinicalStatement": "Condition",
+		"id": "ORG-1214-hc-cond-gwen-renal/_history/1",
+		"clinicalStatementFilter": "90708001",
+		"path": "clinicalStatus"
+	},
+	{
+		"clinicalStatement": "Condition",
+		"id": "ORG-1214-hc-cond-gwen-renal/_history/1",
+		"clinicalStatementFilter": "90708001",
+		"path": "clinicalStatus"
+	},
+	{
+		"clinicalStatement": "Observation",
+		"id": "NEW3",
+		"clinicalStatementFilter": "69405-9",
+		"path": "interpretation"
+	},
+	{
+		"clinicalStatement": "Observation",
+		"id": "NEW3",
+		"clinicalStatementFilter": "69405-9",
+		"path": "bodySite"
+	},
+	{
+		"clinicalStatement": "Observation",
+		"id": "NEW3",
+		"clinicalStatementFilter": "69405-9",
+		"path": "value"
+	}
+]
