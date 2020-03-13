@@ -3,17 +3,17 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>jboss-ga-repository</id>
-        <url>https://maven.repository.redhat.com/ga/</url>
-        <source>PROJECT</source>
+        <id>local</id>
+        <url>/home/jboss/.m2/repository</url>
+        <source>LOCAL</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>local</id>
-        <url>/home/jboss/.m2/repository</url>
-        <source>LOCAL</source>
+        <id>repo-cF5dmJVwNfH9yvGk</id>
+        <url>http://nexus.pam-7-tools-user50.svc:8081/content/groups/public/</url>
+        <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
@@ -27,9 +27,9 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>repo-JY6EcKdqsxiSYaoz</id>
-        <url>http://nexus.pam-7-tools-user50.svc:8081/content/groups/public/</url>
-        <source>SETTINGS</source>
+        <id>jboss-ga-repository</id>
+        <url>https://maven.repository.redhat.com/ga/</url>
+        <source>PROJECT</source>
       </metadata>
     </repository>
   </repositories>
