@@ -121,7 +121,7 @@
       <bpmn2:dataInputAssociation id="_GhUnOl1nEeqbPJMh8bR5yA">
         <bpmn2:targetRef>_0F8C258F-37F5-4FE8-A5B2-CB1B6B5C4752_UrlInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_GhUnO11nEeqbPJMh8bR5yA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_GhUnPF1nEeqbPJMh8bR5yA"><![CDATA[https://seer-mapper.dev.openplatform.healthcare/seer/]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_GhUnPF1nEeqbPJMh8bR5yA"><![CDATA[http://seer-mapper:8080/seer/]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_GhUnPV1nEeqbPJMh8bR5yA">_0F8C258F-37F5-4FE8-A5B2-CB1B6B5C4752_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>

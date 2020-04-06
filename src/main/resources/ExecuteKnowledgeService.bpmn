@@ -250,7 +250,7 @@
       <bpmn2:dataInputAssociation id="_IL3EmlmYEeq-4frr1c612A">
         <bpmn2:targetRef>_EC53D6E0-C4AF-458C-940D-B983E5B1A369_UrlInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_IL3Em1mYEeq-4frr1c612A">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IL3EnFmYEeq-4frr1c612A"><![CDATA[https://km-components.dev.openplatform.healthcare/km-manager/fhir/]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IL3EnFmYEeq-4frr1c612A"><![CDATA[http://km-components:8080/km-manager/fhir/]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IL3EnVmYEeq-4frr1c612A">_EC53D6E0-C4AF-458C-940D-B983E5B1A369_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>

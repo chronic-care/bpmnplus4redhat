@@ -179,7 +179,7 @@
       <bpmn2:dataInputAssociation id="_53P4rF8kEeqbPJMh8bR5yA">
         <bpmn2:targetRef>_DEA39D8E-3605-4CDB-B26B-9F65173FDCB7_UrlInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_53P4rV8kEeqbPJMh8bR5yA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_53P4rl8kEeqbPJMh8bR5yA"><![CDATA[https://seer-mapper.dev.openplatform.healthcare/seer/]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_53P4rl8kEeqbPJMh8bR5yA"><![CDATA[http://seer-mapper:8080/seer/]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_53P4r18kEeqbPJMh8bR5yA">_DEA39D8E-3605-4CDB-B26B-9F65173FDCB7_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
@@ -323,7 +323,7 @@
       <bpmn2:dataInputAssociation id="_53Qftl8kEeqbPJMh8bR5yA">
         <bpmn2:targetRef>_EC53D6E0-C4AF-458C-940D-B983E5B1A369_UrlInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_53Qft18kEeqbPJMh8bR5yA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_53QfuF8kEeqbPJMh8bR5yA"><![CDATA[https://km-components.dev.openplatform.healthcare/km-manager/fhir/]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_53QfuF8kEeqbPJMh8bR5yA"><![CDATA[http://km-components:8080/km-manager/fhir/]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_53QfuV8kEeqbPJMh8bR5yA">_EC53D6E0-C4AF-458C-940D-B983E5B1A369_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
