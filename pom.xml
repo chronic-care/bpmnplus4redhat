@@ -12,18 +12,6 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
-  <distributionManagement>
-    <repository>
-      <id>hc-nexus-releases</id>
-      <name>releases</name>
-      <url>https://repository.openplatform.healthcare/repository/maven-releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>hc-nexus-snapshots</id>
-      <name>snapshots</name>
-      <url>https://repository.openplatform.healthcare/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
