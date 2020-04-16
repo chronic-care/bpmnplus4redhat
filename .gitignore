@@ -1,1 +1,44 @@
-/target/
+.classpath
+.factorypath
+.project
+.settings
+settings.json
+
+org.eclipse.jdt.*
+*.iml
+
+target
+logs
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Output directories
+out/
+build/
+classes/
+
+# Java class files
+*.class
+
+# Gradle
+.gradle/
+gradle.properties
+.settings/org.eclipse.buildship.core.prefs
+.classpath
+.project
+bin/log4j.xml
+/bin/
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.directory
