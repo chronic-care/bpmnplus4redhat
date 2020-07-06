@@ -19,7 +19,7 @@
   <repositories>
     <repository>
       <id>hc-nexus-mc</id>
-      <url>https://repository.openplatform.healthcare/repository/maven-central/</url>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-central/</url>
     </repository>
     <repository>
       <id>redhat-ga-repository</id>
@@ -28,11 +28,11 @@
     </repository>
     <repository>
       <id>hc-nexus-snapshots</id>
-      <url>https://repository.openplatform.healthcare/repository/maven-snapshots/</url>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-snapshots/</url>
     </repository>
     <repository>
       <id>hc-nexus-releases</id>
-      <url>https://repository.openplatform.healthcare/repository/maven-releases/</url>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-releases/</url>
     </repository>
   </repositories>
   <dependencyManagement>
@@ -94,12 +94,12 @@
     <repository>
       <id>hc-nexus-releases</id>
       <name>releases</name>
-      <url>https://repository.openplatform.healthcare/repository/maven-releases/</url>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>hc-nexus-snapshots</id>
       <name>snapshots</name>
-      <url>https://repository.openplatform.healthcare/repository/maven-snapshots/</url>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>

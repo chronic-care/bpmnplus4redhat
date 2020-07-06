@@ -10,7 +10,14 @@ plugins {
 }
 
 group = 'com.perspecta.healthconcourse.bpmn'
-version = '1.0.0-SNAPSHOT'
+
+if (!project.hasProperty("build_version")) {
+    version = "1.0.0-SNAPSHOT"
+}
+else {
+    version = build_version
+}
+
 description = 'ckd-treat-patient'
 sourceCompatibility = '1.8'
 
@@ -22,15 +29,15 @@ repositories {
     }
 
     maven {
-        url = uri('https://repository.openplatform.healthcare/repository/maven-central/')
+        url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-central/')
     }
 
     maven {
-        url = uri('https://repository.openplatform.healthcare/repository/maven-snapshots/')
+        url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-snapshots/')
     }
 
     maven {
-        url = uri('https://repository.openplatform.healthcare/repository/maven-releases/')
+        url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-releases/')
     }
 
     maven {
