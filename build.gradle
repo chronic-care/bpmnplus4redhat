@@ -5,6 +5,7 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 
 repositories {
@@ -66,7 +67,7 @@ sourceCompatibility = '1.8'
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.java 
+            artifact "build/libs/${project.name}-${version}-all.jar"
         }
     }
     
@@ -75,6 +76,7 @@ publishing {
             def releasesRepoUrl = "${dhpNexusReleaseUrl}"
             def snapshotsRepoUrl = "${dhpNexusUrl}"
             url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+
             credentials {
                 username = "${dhpNexusUserName}"
                 password = "${dhpNexusUserPassword}"
@@ -87,3 +89,5 @@ publishing {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+
+shadowJar{}
