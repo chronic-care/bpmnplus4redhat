@@ -7,6 +7,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'    
 }
 
 group = 'com.perspecta.healthconcourse.bpmn'
@@ -30,14 +31,26 @@ repositories {
 
     maven {
         url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-central/')
+            credentials {
+                username = "${dhpNexusUserName}"
+                password = "${dhpNexusUserPassword}"
+            }
     }
 
     maven {
         url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-snapshots/')
+            credentials {
+                username = "${dhpNexusUserName}"
+                password = "${dhpNexusUserPassword}"
+            }
     }
 
     maven {
         url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-releases/')
+            credentials {
+                username = "${dhpNexusUserName}"
+                password = "${dhpNexusUserPassword}"
+            }
     }
 
     maven {
@@ -62,7 +75,7 @@ java {
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.java 
+            artifact "build/libs/${project.name}-${version}-all.jar"
         }
     }
     
@@ -77,10 +90,11 @@ publishing {
             }
         }
     }
-    
 }
 
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+
+shadowJar{ }
