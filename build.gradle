@@ -10,23 +10,35 @@ plugins {
 repositories {
     mavenLocal()
     maven {
-        url = uri('http://maven.repository.redhat.com/ga/')
+        url = uri('https://maven.repository.redhat.com/ga/')
     }
 
     maven {
-        url = uri('https://repository.openplatform.healthcare/repository/maven-central/')
+        url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-central/')
+            credentials {
+                username = "${dhpNexusUserName}"
+                password = "${dhpNexusUserPassword}"
+            }
     }
 
     maven {
-        url = uri('https://repository.openplatform.healthcare/repository/maven-snapshots/')
+        url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-snapshots/')
+            credentials {
+                username = "${dhpNexusUserName}"
+                password = "${dhpNexusUserPassword}"
+            }
     }
 
     maven {
-        url = uri('https://repository.openplatform.healthcare/repository/maven-releases/')
+        url = uri('https://nexus.healthconcourse.com/nexus/repository/maven-releases/')
+            credentials {
+                username = "${dhpNexusUserName}"
+                password = "${dhpNexusUserPassword}"
+            }
     }
 
     maven {
-        url = uri('http://repo.maven.apache.org/maven2')
+        url = uri('https://repo.maven.apache.org/maven2')
     }
 }
 
@@ -34,6 +46,11 @@ dependencies {
     implementation 'com.perspecta.bpmn.handler:bpmn-handlers:1.0-SNAPSHOT'
     implementation 'com.perspecta.bpmn.listener:bpmn-listeners:1.0-SNAPSHOT'
     implementation 'org.apache.httpcomponents:httpmime:4.5.3'
+
+    implementation('commons-codec:commons-codec'){  // Since someone yanked 1.9
+        version { strictly '1.10' }
+    }
+
     testImplementation 'junit:junit:4.12'
     compileOnly 'org.kie:kie-internal:7.33.0.Final-redhat-00002'
     compileOnly 'org.jbpm:jbpm-workitems-rest:7.33.0.Final-redhat-00002'
