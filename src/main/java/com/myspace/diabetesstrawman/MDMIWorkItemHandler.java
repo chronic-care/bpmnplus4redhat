@@ -74,6 +74,7 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 
 		if (sourceInstance != null){
 			Patient patient =  (Patient) sourceInstance;
+			logger.info("Patient id is -------------------------" + patientId);
 			if (patientId != null){
 				patient.setPatientID(patientId);
 			}
