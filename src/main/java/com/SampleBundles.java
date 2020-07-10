@@ -40,20 +40,20 @@ public class SampleBundles implements java.io.Serializable {
 	private final static String G2 = "{\"id\": \"iiii\",  \"meta\": {\"tag\": [{\"system\": \"http://perspecta.com/healthconcourse/services/bpmn \",\"code\":\"HC-000\",\"display\": \"HC-BPMN\"}]},   \"resourceType\": \"Goal\",\"status\": \"proposed\",\"subject\": {\"reference\": \"pppp\"},\"addresses\": [{  \"reference\": \"Condition/V_500HS_9000011_926\",  \"display\": \"Type 2 diabetes mellitus without complication\"}    ],    \"description\": {\"text\": \"Lower sugar intake\"    },\"target\": {\"measure\": {\"coding\": [{\"system\": \"http://snomed.info/\",\"code\": \"365845005\",\"display\": \"Haemoglobin A1C - diabetic control finding\"}],\"text\": \"Haemoglobin A1C - diabetic control finding\"},\"detailRange\": {\"low\": {\"value\": llll,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"},\"high\": {\"value\": hhhh,\"unit\": \"%\",\"system\": \"http://unitsofmeasure.org\"}}}}";
 	public static String createGoal(Object object) {
 	    Patient patient =(Patient)object;
-		return G2.replace("iiii", UUID.randomUUID().toString()).replace("pppp", patient.patientID).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
+		return G2.replace("iiii", UUID.randomUUID().toString()).replace("llll", String.valueOf(patient.getHbA1cRangeLow())).replace("hhhh", String.valueOf(patient.getHbA1cRangeHigh()));
 	}
 	
 	private final static String M2 = "{\"id\": \"iiii\", \"meta\": {\"tag\": [{\"system\": \"http://perspecta.com/healthconcourse/services/bpmn \",\"code\":\"HC-000\",\"display\": \"HC-BPMN\"}]},   \"resourceType\": \"MedicationRequest\",\"subject\": {\"reference\": \"pppp\"},\"requester\": {\"agent\": {\"reference\": \"Practitioner/cc-prac-carlson-john\"}},\"status\": \"active\",\"authoredOn\": \"dddd\",\"medicationCodeableConcept\": {\"coding\": [{\"system\": \"dsds\",\"code\": \"cccc\",\"display\": \"dsds\"}],\"text\": \"dsds\"},\"dosageInstruction\": [{\"text\": \"sig\",\"route\": {\"coding\": [{\"system\": \"http://snomed.info/sct [snomed.info]\",\"code\": \"26643006\",\"display\": \"Oral route\"}],\"text\": \"Oral route\"}}]}";
 	
 	public static String createMedicationRequest(Object object) {
 	    Patient patient =(Patient)object;
-		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
+		return M2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) ).replace("cccc", String.valueOf(patient.getMedicationRequestCode().getCode())).replace("dsds", String.valueOf(patient.getMedicationRequestCode().getDisplayName())).replace("sig", String.valueOf(patient.getMedicationRequestSIG()));
 	}
 	 
 	private final static String R2 = "{\"resourceType\":\"ProcedureRequest\",\"id\": \"iiii\",   \"meta\": {\"tag\": [{\"system\": \"http://perspecta.com/healthconcourse/services/bpmn \",\"code\":\"HC-000\",\"display\": \"HC-BPMN\"}]},    \"subject\": {\"reference\": \"pppp\"},\"requester\": \"Practitioner/cc-prac-carlson-john\",\"performer\": \"Practitioner/cc-prac-carlson-fred\",\"status\": \"active\",\"authoredOn\" : \"dddd\",\"basedOn\": {\"reference\": \"Condition/V_500HS_9000011_926\"},\"code\" :{\"coding\": [{\"system\": \"http://snomed.info/sct\",\"code\": \"3457005\",\"display\": \"Patient referral (procedure)\"}]}}";
 	public static String createProcedureRequest(Object object) {
 	    Patient patient =(Patient)object;
-		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("pppp", patient.patientID).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+		return R2.replaceAll("iiii", UUID.randomUUID().toString()).replaceAll("dddd", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
 	}
 
 }
