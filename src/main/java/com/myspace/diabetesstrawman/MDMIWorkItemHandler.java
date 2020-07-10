@@ -7,6 +7,8 @@ import java.lang.reflect.Modifier;
 import java.util.List;
 import java.util.Map;
 
+import com.Patient;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
@@ -34,6 +36,13 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 
 	String source;
 
+	String patientId;
+
+	String target;
+
+	Object sourceInstance = null;
+
+
 	protected void setSource(String source) {
 		this.source = source;
 	}
@@ -42,17 +51,19 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 		this.target = target;
 	}
 
-	String target;
-
-	Object sourceInstance = null;
-
+	protected void setPatientId(String patientId) {
+		this.patientId = patientId;
+	}
+	
 	public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
 
 		source = (String) workItem.getParameter("source");
 		target = (String) workItem.getParameter("target");
 		sourceInstance = workItem.getParameter("sourceInstance");
 		resultClass = (String) workItem.getParameter("ResultClass");
-
+		
+		Map <String, Object> workItems = workItem.getParameters();
+		
 		logger.info("url is " + (String) workItem.getParameter("Url"));
 
 		logger.info("source is " + source);
@@ -60,6 +71,12 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 		logger.info("sourceInstance is " + sourceInstance);
 		logger.info("resultClass is " + resultClass);
 		logger.info("new log");
+
+		if (sourceInstance != null){
+			Patient patient =  (Patient) sourceInstance;
+			patient.setPatientID(patientId);
+			logger.info("id is" + ((Patient)sourceInstance).patientID);
+		}
 		super.executeWorkItem(workItem, manager);
 	}
 
