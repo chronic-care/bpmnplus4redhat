@@ -1,11 +1,13 @@
 package com.myspace.diabetesstrawman;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.List;
 import java.util.Map;
+import java.io.File;
+import java.io.FileWriter;
+
+import org.apache.http.entity.mime.content.FileBody;
 
 import com.Patient;
 
@@ -17,7 +19,6 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -35,13 +36,11 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	String content;
 
 	String source;
-
 	String patientId;
 
 	String target;
 
 	Object sourceInstance = null;
-
 
 	protected void setSource(String source) {
 		this.source = source;
@@ -54,33 +53,35 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 	protected void setPatientId(String patientId) {
 		this.patientId = patientId;
 	}
-	
+
 	public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
 
 		source = (String) workItem.getParameter("source");
 		target = (String) workItem.getParameter("target");
 		sourceInstance = workItem.getParameter("sourceInstance");
 		resultClass = (String) workItem.getParameter("ResultClass");
-		
-		Map <String, Object> workItems = workItem.getParameters();
-		
+		patientId = (String) workItem.getParameter("patientId");
+		Map<String, Object> workItems = workItem.getParameters();
+		for (Map.Entry<String, Object> entry : workItems.entrySet()) {
+			logger.info("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+		}
+
 		logger.info("url is " + (String) workItem.getParameter("Url"));
 
+		logger.info("patientId is " + patientId);
 		logger.info("source is " + source);
 		logger.info("target is " + target);
+		if (sourceInstance != null) {
+			Patient patient = (Patient) sourceInstance;
+			if (patientId != null) {
+				patient.setPatientID(patientId);
+			}
+
+			logger.info("id is" + ((Patient) sourceInstance).patientID);
+		}
 		logger.info("sourceInstance is " + sourceInstance);
 		logger.info("resultClass is " + resultClass);
 		logger.info("new log");
-
-		if (sourceInstance != null){
-			Patient patient =  (Patient) sourceInstance;
-			logger.info("Patient id is -------------------------" + patientId);
-			if (patientId != null){
-				patient.setPatientID(patientId);
-			}
-			
-			logger.info("id is" + ((Patient)sourceInstance).patientID);
-		}
 		super.executeWorkItem(workItem, manager);
 	}
 
@@ -135,7 +136,7 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 			// build http request and assign multipart upload data
 			HttpUriRequest request = RequestBuilder.post(API_URI).setEntity(data).build();
 
-			logger.debug("Executing request " + request.getRequestLine());
+			logger.info("Executing request " + request.getRequestLine());
 
 			// Create a custom response handler
 			ResponseHandler<String> responseHandler = response -> {
@@ -178,13 +179,13 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 
 	public static Object mergeInstances(String resultClass, Object source, Object target) {
 		try {
-			logger.debug("mergeInstances " + resultClass);
+			logger.info("mergeInstances " + resultClass);
 			if (source != null && target != null) {
-				logger.debug("mergeInstances " + resultClass);
+				logger.info("mergeInstances " + resultClass);
 				Class<?> resultClassDefinition = Class.forName(resultClass);
 				Field[] fields = resultClassDefinition.getDeclaredFields();
 				for (Field field : fields) {
-					logger.debug("mergeInstances " + field.getName());
+					logger.info("mergeInstances " + field.getName());
 					field.getModifiers();
 					if (Modifier.isStatic(field.getModifiers()) && Modifier.isFinal(field.getModifiers())) {
 						continue;
@@ -193,7 +194,11 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 					if (value != null) {
 
 						if (value instanceof List) {
+
 							List targetList = (List) field.get(target);
+							for (Field field2 : fields) {
+								logger.info(field2.getName());
+							}
 							targetList.addAll((List) value);
 						} else {
 							if (value instanceof Double) {
@@ -204,12 +209,13 @@ public class MDMIWorkItemHandler extends RESTWorkItemHandler {
 							} else {
 
 								field.set(target, value);
+
 							}
 						}
 					}
 				}
 			} else {
-				logger.debug("mergeInstances source == null && target == null " + resultClass);
+				logger.info("mergeInstances source == null && target == null " + resultClass);
 			}
 		} catch (IllegalArgumentException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
