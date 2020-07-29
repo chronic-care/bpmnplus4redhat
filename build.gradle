@@ -59,6 +59,8 @@ repositories {
 }
 
 dependencies {
+    implementation platform('com.redhat.ba:ba-platform-bom:7.7.0.redhat-00002')
+
     implementation 'com.perspecta.healthconcourse.bpmn.handler:bpmn-handlers:1.0-RELEASE'
     testImplementation 'junit:junit:4.12'
     compileOnly 'org.kie:kie-internal:7.33.0.Final-redhat-00002'
