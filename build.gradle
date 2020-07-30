@@ -63,10 +63,10 @@ dependencies {
 
     implementation 'com.perspecta.healthconcourse.bpmn.handler:bpmn-handlers:1.0-RELEASE'
     testImplementation 'junit:junit:4.12'
-    compileOnly 'org.kie:kie-internal:7.33.0.Final-redhat-00002'
-    compileOnly 'org.jbpm:jbpm-workitems-rest:7.33.0.Final-redhat-00002'
-    compileOnly 'org.jbpm:jbpm-workitems-core:7.33.0.Final-redhat-00002'
-    compileOnly 'org.kie:kie-api:7.33.0.Final-redhat-00002'
+    compileOnly 'org.kie:kie-internal'
+    compileOnly 'org.jbpm:jbpm-workitems-rest'
+    compileOnly 'org.jbpm:jbpm-workitems-core'
+    compileOnly 'org.kie:kie-api'
 }
 
 java {
