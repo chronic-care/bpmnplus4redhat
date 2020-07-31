@@ -77,7 +77,7 @@ java {
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact "build/libs/${project.name}-${version}-all.jar"
+            artifact "build/libs/${project.name}-${version}.jar"
         }
     }
     
