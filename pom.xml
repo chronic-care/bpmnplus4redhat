@@ -73,14 +73,14 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.perspecta.bpmn.handler</groupId>
+      <groupId>com.perspecta.healthconcourse.bpmn.handler</groupId>
       <artifactId>bpmn-handlers</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0-RELEASE</version>
     </dependency>
     <dependency>
-      <groupId>com.perspecta.bpmn.listener</groupId>
+      <groupId>com.perspecta.healthconcourse.bpmn.listener</groupId>
       <artifactId>bpmn-listeners</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0-RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
@@ -98,16 +98,16 @@
       </plugin>
     </plugins>
   </build>
-    <distributionManagement>
-		<repository>
-			<id>hc-nexus-releases</id>
-			<name>releases</name>
-			<url>https://repository.openplatform.healthcare/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>hc-nexus-snapshots</id>
-			<name>snapshots</name>
-			<url>https://repository.openplatform.healthcare/repository/maven-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+  <distributionManagement>
+    <repository>
+      <id>hc-nexus-releases</id>
+      <name>releases</name>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>hc-nexus-snapshots</id>
+      <name>snapshots</name>
+      <url>https://nexus.healthconcourse.com/nexus/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
