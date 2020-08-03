@@ -99,4 +99,12 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+task copyPom(type: Copy) {
+    from file("pom.xml")
+    into file("src/main/resources/META-INF/maven/com.perspecta.healthconcourse.bpmn/ckd-treat-patient")
+
+}
+
+build.dependsOn(copyPom)
+
 //shadowJar{ }
