@@ -1,0 +1,9 @@
+import com.Patient;
+
+rule "PatientHBA1CStatus"
+	dialect "mvel"
+	when
+		patient : Patient( latestHBA1C <= patient.hbA1cRangeHigh )
+	then
+		patient.setHba1cStatus( "OK" );
+end

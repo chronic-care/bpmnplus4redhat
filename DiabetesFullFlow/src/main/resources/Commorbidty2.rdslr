@@ -1,0 +1,12 @@
+import java.lang.Number;
+import com.Patient;
+
+rule "Commorbidty2"
+	dialect "mvel"
+	when
+		>( Patient( conditions contains "1112223333" ) )
+	then
+		>Patient fact0 = new Patient();
+		>fact0.setComorbidityStatus( "MARKED" );
+		>insert( fact0 );
+end

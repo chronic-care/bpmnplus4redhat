@@ -1,0 +1,12 @@
+package com.myspace.diabetesstrawman;
+
+import com.Patient;
+
+rule "PatientSeverity"
+	dialect "mvel"
+	ruleflow-group "patientSeverity"
+	when
+		pateint : Patient( bloodSugar <= 70 || bloodSugar >= 210 )
+	then
+		pateint.setSevereStatus( true );
+end

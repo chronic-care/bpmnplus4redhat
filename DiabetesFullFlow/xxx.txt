@@ -1,0 +1,45 @@
+FHIRUrl = FHIRUrl + "/Observation?subject=" + PatientId +"&code=55284-4,3141-9,8302-2&_sort=date";
+kcontext.setVariable("FHIRUrl", FHIRUrl);
+
+
+
+
+com.google.gson.Gson gson = new com.google.gson.Gson();
+
+com.google.gson.JsonObject response = gson.fromJson(ServiceResponse, com.google.gson.JsonObject.class);
+
+com.google.gson.JsonArray entries = response.get("entry").getAsJsonArray();
+
+float systolic = 0;
+float diastolic = 0;
+float weigth = 0;
+float height = 0;
+
+for (com.google.gson.JsonElement entry : entries) {
+	com.google.gson.JsonObject resource = entry.getAsJsonObject().getAsJsonObject("resource").getAsJsonObject();
+	String code = resource.get("code").getAsJsonObject().get("coding").getAsJsonArray().get(0).getAsJsonObject().get("code").getAsString();
+	if (weigth == 0 && "3141-9".equals(code)) {
+		weigth = resource.getAsJsonObject().get("valueQuantity").getAsJsonObject().get("value").getAsFloat();
+	}
+	if (height == 0 && "8302-2".equals(code)) {
+		height = resource.getAsJsonObject().get("valueQuantity").getAsJsonObject().get("value").getAsFloat();
+	}
+	if ("55284-4".equals(code)) {
+		com.google.gson.JsonArray components = resource.get("component").getAsJsonArray();
+		for (com.google.gson.JsonElement component : components) {
+			String componentCode = component.getAsJsonObject().get("code").getAsJsonObject().get("coding").getAsJsonArray().get(0).getAsJsonObject()
+					.get("code").getAsString();
+			if (systolic == 0 && "8480-6".equals(componentCode)) {
+				systolic = component.getAsJsonObject().get("valueQuantity").getAsJsonObject().get("value").getAsFloat();
+			}
+			if (diastolic == 0 && "8462-4".equals(componentCode)) {
+				diastolic = component.getAsJsonObject().get("valueQuantity").getAsJsonObject().get("value").getAsFloat();
+			}
+		}
+	}
+}
+
+kcontext.setVariable("VitalAndMesurements", 
+                     new com.bpm_health.hellopatient.VitalSignMesurements(
+                       new com.bpm_health.hellopatient.BloodPressure(systolic, diastolic), weigth, height));
+
