@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "ed489add-a8ea-4808-b850-b3b7a6c10beb",
+		"name": "BPMN2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "delete condition",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://fhir-st-mpi-clinical.dev.openplatform.healthcare/Condition/{{resource-id}}?_cascade=delete&=",
+							"protocol": "https",
+							"host": [
+								"fhir-st-mpi-clinical",
+								"dev",
+								"openplatform",
+								"healthcare"
+							],
+							"path": [
+								"Condition",
+								"{{resource-id}}"
+							],
+							"query": [
+								{
+									"key": "_cascade",
+									"value": "delete"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "expunge condition",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"limit\",\n      \"valueInteger\": 100000\n    },{\n      \"name\": \"expungeDeletedResources\",\n      \"valueBoolean\": true\n    },{\n      \"name\": \"expungePreviousVersions\",\n      \"valueBoolean\": false\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://fhir-st-mpi-clinical.dev.openplatform.healthcare/Condition/{{resource-id}}$expunge",
+							"protocol": "https",
+							"host": [
+								"fhir-st-mpi-clinical",
+								"dev",
+								"openplatform",
+								"healthcare"
+							],
+							"path": [
+								"Condition",
+								"{{resource-id}}$expunge"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

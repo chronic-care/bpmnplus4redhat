@@ -1,0 +1,19 @@
+[
+	{
+		"clinicalStatement": "Condition",
+		"id": "ORG-1228-hc-cond-claire-hf-2/_history/1",
+		"clinicalStatementFilter": "http://snomed.info/sct|153931000119109",
+		"clinicalStatementDisplay": "MISSING",
+		"path": "clinicalStatus",
+		"type": "String",
+		"values": [
+			"active",
+			"recurrence",
+			"relapse",
+			"inactive",
+			"remission",
+			"resolved"
+		],
+		"value": null
+	}
+]

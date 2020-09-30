@@ -1,0 +1,63 @@
+
+
+
+
+The seer-mapper service has been deployed and can be accessed at https://seer-mapper.dev.openplatform.healthcare. The Swagger UI page is https://seer-mapper.dev.openplatform.healthcare/swagger-ui.html. I have not figured out how to document the “optional” parameters in Swagger, so just be warned if trying to use that page.
+ 
+There are two required parameters when calling the service: resourceType and patientId.
+ 
+resourceTypes currently supported are: Condition, Encounter, Patient, Procedure and Observation.
+patientId is the patientId.
+ 
+Any other parameters passed on the call are appended to the FHIR query. As examples, the following work:
+ 
+https://seer-mapper.dev.openplatform.healthcare/seer?resourceType=Patient&patientId=00E-131
+https://seer-mapper.dev.openplatform.healthcare/seer?patientId=00E-131&resourceType=Observation&code=3094-0,8867-4
+https://seer-mapper.dev.openplatform.healthcare/seer?resourceType=Procedure&patientId=00E-131&_sort=_lastUpdated&_count=1
+ 
+There is an issue using special characters on the value of a parameter. For example, patient 00E-131 has a Procedure with a code of TWMale10+ and the plus sign is not being matched for some reason.
+ 
+Anyway, try it out. Break it. And if you break it, please let me know how.
+ 
+Thanks,
+Gary
+
+
+
+
+This is what I currently have. Please send any changes to me.
+ 
+Endpoints (All request parameters have required set to false. Also the controller, accepts POST and PUT requests.):
+${baseurl}/seer/Condition/{resourceId}?clinicalStatus=X&verificationStatus=X&onsetDateTime=X
+${baseurl}/seer/Observation/{resourceId}?valueString=X&valueQuantity=X&comparator=X&unit=X&system=X&code=X
+ 
+There is basically no error handling. So if something does not update, it is just ignored.
+The values for clinicalStatus, verificationStatus and comparator will have to be the Enum values from the respective FHIR class (Condition.ConditionClinicalStatus, Condition.ConditionVerificationStatus and Quantity.QuantityComparator).
+ 
+ 
+For a Condition, if a value is not empty it will be updated.
+ 
+For an Observation:
+               If the valueString is not empty and the Observation.value is currently a String
+Then
+Update valueString
+               Else if valueQuantity is not empty and the Observation.value is currently a Quantity
+               Then
+                              Update Quantity.value
+                              If comparator is not emtpy
+                              Then
+                                             Update comparator
+                              End if
+                              If unit is not empty
+                              Then
+                                             Update unit
+                              End if
+                              If system is not empty
+                              Then
+                                             Update system
+                              End if
+                              If code is not empty
+                              Then
+                                             Update code
+                              End if
+               End if
