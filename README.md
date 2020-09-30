@@ -7,7 +7,6 @@ To build and launch
 
 ## Create a New Docker Image
 
-`docker build logicahealth/mdmi-transformation-service:latest`
 
 docker build -t bpmnplus4redhat .
 
